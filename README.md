@@ -1,4 +1,4 @@
-# Express React Skeleton
+# Express Skeleton
 
 This is a skeleton for a backend web application using Express.js. It is intended to be used as a starting point for new projects. It is not intended to be a production-ready application.
 
