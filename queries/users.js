@@ -1,5 +1,16 @@
 const db = require("../db/dbConfig");
 
+// read all users.
+const getAllUsers = async () => {
+  try {
+    const allUsers = await db.any("SELECT * FROM users");
+    console.log(allUsers);
+    return allUsers;
+  } catch (error) {
+    return error;
+  }
+};
+
 // read a single user.
 const getUserById = async (id) => {
   try {
@@ -71,6 +82,7 @@ const deleteUser = async (id) => {
 };
 
 module.exports = {
+  getAllUsers,
   getUserById,
   addUser,
   updateUser,

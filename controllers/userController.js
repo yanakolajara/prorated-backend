@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const {
+  getAllUsers,
   getUserById,
   addUser,
   updateUser,
@@ -9,6 +10,17 @@ const {
 } = require("../queries/users");
 
 const { checkUsername, validateURL } = require("../validations/checkUsers");
+
+router.get("/", async (req, res) => {
+  const allUsers = await getAllUsers();
+
+  if (Array.isArray(allUsers)) {
+    res.json(allUsers);
+  } else {
+    console.log(allUsers);
+    res.status(500).json({ error: "Server error" });
+  }
+});
 
 router.get("/:id", async (req, res) => {
   const id = req.params.id;
