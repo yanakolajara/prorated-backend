@@ -22,6 +22,14 @@ const getContractorsByID = async (id) => {
   }
 };
 
+const getAllContractorsPlumbing = (async) => {
+  try {
+    db.oneOrNone(
+      "SELECT contractor.name FROM services LEFT JOIN contractor ON contractors_services.contractor_id = contractors.id WHERE contractors_services.service_id - 1"
+    );
+  } catch (error) {}
+};
+
 module.exports = {
   getAllContractors,
   getContractorsByID,
