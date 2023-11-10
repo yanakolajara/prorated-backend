@@ -22,15 +22,28 @@ const getContractorsByID = async (id) => {
   }
 };
 
-const getAllContractorsPlumbing = (async) => {
+const getContractorsByService = async (serviceName) => {
   try {
-    db.oneOrNone(
-      "SELECT contractor.name FROM services LEFT JOIN contractor ON contractors_services.contractor_id = contractors.id WHERE contractors_services.service_id - 1"
+    const contractors = await db.any(
+      `
+        SELECT contractors.*, images.image_url
+        FROM contractors
+        JOIN contractors_services ON contractors.id = contractors_services.contractor_id
+        JOIN services ON contractors_services.service_id = services.id
+        LEFT JOIN images ON contractors.id = images.contractor_id
+        WHERE services.name = $1
+        `,
+      [serviceName]
     );
-  } catch (error) {}
+    return contractors;
+  } catch (error) {
+    console.log(error);
+    return error.message;
+  }
 };
 
 module.exports = {
   getAllContractors,
   getContractorsByID,
+  getContractorsByService,
 };

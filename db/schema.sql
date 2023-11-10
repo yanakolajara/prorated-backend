@@ -17,15 +17,24 @@ CREATE TABLE contractors (
 DROP TABLE IF EXISTS contractors_services;
 
 CREATE TABLE contractors_services (
-id SERIAL PRIMARY KEY,
-contractor_id  INTEGER REFERENCES contractors(id),
-service_id INTERGER
-
-)
+    id SERIAL PRIMARY KEY,
+    contractor_id INTEGER REFERENCES contractors(id),
+    service_id INTEGER REFERENCES services(id) 
+);
 
 DROP TABLE IF EXISTS services;
 
 CREATE TABLE services (
-id INTEGER REFERENCES contractors_services(id)
-name VARCHAR(50)
-)
+    id SERIAL PRIMARY KEY, 
+    name VARCHAR(50)
+);
+
+
+DROP TABLE IF EXISTS images;
+
+CREATE TABLE images (
+    id SERIAL PRIMARY KEY,
+    contractor_id INTEGER REFERENCES contractors(id),
+    image_url VARCHAR(255) NOT NULL
+);
+
