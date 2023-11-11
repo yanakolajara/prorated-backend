@@ -13,7 +13,7 @@ const getAllContractors = async () => {
 const getContractorsByID = async (id) => {
   try {
     const contractor = await db.oneOrNone(
-      "SELECT * FROM contractor WHERE id = $1",
+      "SELECT * FROM contractors WHERE id = $1",
       [id]
     );
     return contractor;
