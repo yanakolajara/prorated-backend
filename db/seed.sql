@@ -8,3 +8,69 @@ VALUES
   ('bob_jones', 'letmein', 'bob.jones@example.com', 'Bob', 'Jones', '555-567-8901', 'https://avatarfiles.alphacoders.com/209/209573.jpg', 'Chicago'),
   ('sarah_white', '12345678', 'sarah.white@example.com', 'Sarah', 'White', '555-234-5678', 'https://cloudfront-us-east-2.images.arcpublishing.com/reuters/EHAIKCVG6NLBNNVXZE7AXPAAJ4.jpg', 'San Francisco'),
   ('mike_jackson', 'p@ssw0rd', 'mike.jackson@example.com', 'Mike', 'Jackson', '555-876-1234', 'https://celebdial.s3.amazonaws.com/celeb_pic/michael-jackson.jpg', 'Miami');
+
+INSERT INTO
+  contractors(name, description, ratings, reviews)
+VALUES
+  ('Smith Construction', 'General construction services for residential and commercial projects', 4.8, 35),
+  ('GreenScape Landscaping', 'Specializing in sustainable and creative landscaping solutions', 4.5, 28),
+  ('Swift Roofing Experts', 'Swift and reliable roofing services with attention to detail', 4.9, 42),
+  ('PlumbMasters', 'Your go-to experts for all plumbing needs, from repairs to installations', 4.7, 39),
+  ('Wired Wizards', 'Electrical wizards providing safe and efficient wiring solutions', 4.6, 31),
+  ('ColorSplash Painters', 'Transforming spaces with a splash of colors and professional painting', 4.9, 47),
+  ('FloorCrafters', 'Crafting beautiful and durable floors with precision and expertise', 4.8, 36),
+  ('CoolBreeze HVAC', 'Keeping your home comfortable with top-notch HVAC maintenance', 4.7, 40),
+  ('BugBusters Pest Control', 'Busting bugs and pests to keep your home and business pest-free', 4.6, 29),
+  ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 4.8, 38),
+  ('IronGuard Fencing', 'Providing strong and aesthetically pleasing fence installations', 4.7, 33),
+  ('CrystalClear Windows', 'Experts in professional window replacement for energy-efficient homes', 4.9, 45),
+  ('ApplianceSavers', 'Saving your appliances with quick and reliable repair services', 4.5, 27),
+  ('BathBliss Remodeling', 'Bringing bliss to your bathroom with transformative remodeling', 4.8, 41),
+  ('SecureHaven Security', 'Creating secure havens with advanced home security installations', 4.9, 50),
+  ('PowerSpark Electricians', 'Powerful solutions for all your electrical needs', 4.7, 37);
+
+
+INSERT INTO 
+  services(name, description)
+VALUES
+  ('Home Renovation', 'Complete renovation services for residential properties'),
+  ('Landscaping Design', 'Customized landscaping design and implementation'),
+  ('Roof Repair', 'Professional roof repair and maintenance'),
+  ('Plumbing Services', 'Comprehensive plumbing solutions for homes and businesses'),
+  ('Electrical Wiring', 'Safe and efficient electrical wiring installation and repair'),
+  ('Painting Services', 'Interior and exterior painting services with a variety of color options'),
+  ('Flooring Installation', 'High-quality flooring installation for different types of flooring'),
+  ('HVAC Maintenance', 'Regular maintenance and repair of heating, ventilation, and air conditioning systems'),
+  ('Pest Control', 'Effective pest control services for homes and commercial spaces'),
+  ('Carpentry and Woodwork', 'Custom carpentry and woodwork for various projects'),
+  ('Fence Installation', 'Durable and aesthetically pleasing fence installation'),
+  ('Window Replacement', 'Professional window replacement services for improved energy efficiency'),
+  ('Appliance Repair', 'Quick and reliable repair services for household appliances'),
+  ('Bathroom Remodeling', 'Transformative bathroom remodeling with modern designs'),
+  ('Home Security Installation', 'Installation of advanced home security systems for enhanced safety'),
+  ('Electrician', 'Skilled electricians for all your electrical needs');
+
+
+INSERT INTO
+  contractors_services (contractor_id, service_id)
+VALUES
+  (1, 1),
+  (1, 3),
+  (2, 2),
+  (2, 10),
+  (3, 4),
+  (3, 11),
+  (4, 5),
+  (4, 14),
+  (5, 6),
+  (5, 15),
+  (6, 7),
+  (6, 8),
+  (7, 9),
+  (7, 12),
+  (8, 13),
+  (8, 16),
+  (9, 12),
+  (9, 16),
+  (10, 16),
+  (10, 16);

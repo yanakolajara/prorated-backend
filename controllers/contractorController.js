@@ -28,6 +28,7 @@ contractor.get("/:id", async (req, res) => {
 contractor.get("/", async (req, res) => {
   try {
     const allContractors = await getAllContractors();
+    console.log(allContractors);
 
     if (allContractors.length === 0) {
       res.status(404).json({ error: "No Contractor Found" });
