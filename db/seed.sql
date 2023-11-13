@@ -31,24 +31,24 @@ VALUES
 
 
 INSERT INTO 
-  services(name, description)
+  services(name, description, image)
 VALUES
-  ('Home Renovation', 'Complete renovation services for residential properties'),
-  ('Landscaping Design', 'Customized landscaping design and implementation'),
-  ('Roof Repair', 'Professional roof repair and maintenance'),
-  ('Plumbing Services', 'Comprehensive plumbing solutions for homes and businesses'),
-  ('Electrical Wiring', 'Safe and efficient electrical wiring installation and repair'),
-  ('Painting Services', 'Interior and exterior painting services with a variety of color options'),
-  ('Flooring Installation', 'High-quality flooring installation for different types of flooring'),
-  ('HVAC Maintenance', 'Regular maintenance and repair of heating, ventilation, and air conditioning systems'),
-  ('Pest Control', 'Effective pest control services for homes and commercial spaces'),
-  ('Carpentry and Woodwork', 'Custom carpentry and woodwork for various projects'),
-  ('Fence Installation', 'Durable and aesthetically pleasing fence installation'),
-  ('Window Replacement', 'Professional window replacement services for improved energy efficiency'),
-  ('Appliance Repair', 'Quick and reliable repair services for household appliances'),
-  ('Bathroom Remodeling', 'Transformative bathroom remodeling with modern designs'),
-  ('Home Security Installation', 'Installation of advanced home security systems for enhanced safety'),
-  ('Electrician', 'Skilled electricians for all your electrical needs');
+  ('Home Renovation', 'Complete renovation services for residential properties', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Landscaping Design', 'Customized landscaping design and implementation', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Roof Repair', 'Professional roof repair and maintenance', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Plumbing Services', 'Comprehensive plumbing solutions for homes and businesses', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Electrical Wiring', 'Safe and efficient electrical wiring installation and repair', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Painting Services', 'Interior and exterior painting services with a variety of color options', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Flooring Installation', 'High-quality flooring installation for different types of flooring', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('HVAC Maintenance', 'Regular maintenance and repair of heating, ventilation, and air conditioning systems', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Pest Control', 'Effective pest control services for homes and commercial spaces', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Carpentry and Woodwork', 'Custom carpentry and woodwork for various projects', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Fence Installation', 'Durable and aesthetically pleasing fence installation', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Window Replacement', 'Professional window replacement services for improved energy efficiency', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Appliance Repair', 'Quick and reliable repair services for household appliances', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Bathroom Remodeling', 'Transformative bathroom remodeling with modern designs', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Home Security Installation', 'Installation of advanced home security systems for enhanced safety', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Electrician', 'Skilled electricians for all your electrical needs', 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg');
 
 
 INSERT INTO

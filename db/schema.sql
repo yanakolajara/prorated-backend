@@ -32,7 +32,8 @@ CREATE TABLE contractors (
 CREATE TABLE services (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100),
-    description TEXT NOT NULL
+    description TEXT NOT NULL,
+    image TEXT
 );
 
 CREATE TABLE contractors_services (
