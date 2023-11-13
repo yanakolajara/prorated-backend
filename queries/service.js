@@ -9,6 +9,18 @@ const getAllServices = async () => {
   }
 };
 
+const getServiceById = async (service_id) => {
+  try {
+    const service = await db.oneOrNone("SELECT * FROM services WHERE id = $1", [
+      service_id,
+    ]);
+    return service;
+  } catch (error) {
+    return error;
+  }
+};
+
 module.exports = {
   getAllServices,
+  getServiceById,
 };
