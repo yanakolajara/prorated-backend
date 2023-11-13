@@ -3,7 +3,8 @@ const express = require("express");
 const contractor = express.Router();
 const {
   getAllContractors,
-  getContractorsByID,
+  getContractorByID,
+  getContractorsByServiceId,
 } = require("../queries/contractor");
 
 // GET
@@ -12,7 +13,7 @@ contractor.get("/:id", async (req, res) => {
 
   try {
     const id = req.params.id;
-    const contractor = await getContractorsByID(id);
+    const contractor = await getContractorByID(id);
 
     if (contractor) {
       res.status(200).json(contractor);
@@ -30,6 +31,21 @@ contractor.get("/", async (req, res) => {
     const allContractors = await getAllContractors();
     console.log(allContractors);
 
+    if (allContractors.length === 0) {
+      res.status(404).json({ error: "No Contractor Found" });
+    } else {
+      res.status(201).json(allContractors);
+    }
+  } catch (e) {
+    console.log(e);
+    return e.message;
+  }
+});
+
+contractor.get("/service/:id", async (req, res) => {
+  try {
+    const serviceId = req.params.id;
+    const allContractors = await getContractorsByServiceId(serviceId);
     if (allContractors.length === 0) {
       res.status(404).json({ error: "No Contractor Found" });
     } else {
