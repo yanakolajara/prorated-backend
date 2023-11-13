@@ -5,9 +5,9 @@ CREATE DATABASE prorated_dev;
 \c prorated_dev;
 
 DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS contractors_services;
 DROP TABLE IF EXISTS contractors;
 DROP TABLE IF EXISTS services;
-DROP TABLE IF EXISTS contractors_services;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -33,6 +33,7 @@ CREATE TABLE services (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100),
     description TEXT NOT NULL,
+    custom BOOLEAN,
     image TEXT
 );
 
