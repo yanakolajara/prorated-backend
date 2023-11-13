@@ -4,34 +4,10 @@ CREATE DATABASE prorated_dev;
 
 \c prorated_dev;
 
-DROP TABLE IF EXISTS contractors;
-
-CREATE TABLE contractors (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
-    description TEXT NOT NULL,
-    ratings INT,
-    reviews INT
-);
-
-
-DROP TABLE IF EXISTS contractors_services;
-
-CREATE TABLE contractors_services (
-id SERIAL PRIMARY KEY,
-contractor_id  INTEGER REFERENCES contractors(id),
-service_id INTERGER
-
-)
-
-DROP TABLE IF EXISTS services;
-
-CREATE TABLE services (
-id INTEGER REFERENCES contractors_services(id)
-name VARCHAR(50)
-)
-
 DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS contractors_services;
+DROP TABLE IF EXISTS contractors;
+DROP TABLE IF EXISTS services;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -45,3 +21,26 @@ CREATE TABLE users (
   location VARCHAR(100)
 );
 
+CREATE TABLE contractors (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    description TEXT NOT NULL,
+    ratings INT,
+    reviews INT
+);
+
+CREATE TABLE services (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    description TEXT NOT NULL,
+    custom BOOLEAN,
+    image TEXT
+);
+
+CREATE TABLE contractors_services (
+    id SERIAL PRIMARY KEY,
+    contractor_id INTEGER REFERENCES contractors(id)
+    ON DELETE CASCADE,
+    service_id INTEGER REFERENCES services(id)
+    ON DELETE CASCADE
+);
