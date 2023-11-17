@@ -44,3 +44,12 @@ CREATE TABLE contractors_services (
     service_id INTEGER REFERENCES services(id)
     ON DELETE CASCADE
 );
+
+CREATE TABLE reviews (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    contractor_id INTEGER NOT NULL REFERENCES contractors(id),
+    user_id  INTEGER NOT NULL REFERENCES users(id),
+    review TEXT NOT NULL,
+    rating INT NOT NULL CHECK(rating >=1 and rating <= 5),
+    date TIMESTAMP
+);
