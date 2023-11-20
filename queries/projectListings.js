@@ -9,4 +9,13 @@ const getAllProjects = async () => {
   }
 };
 
-module.exports = { getAllProjects };
+const getListingById = async (id) => {
+  try {
+    const project = await db.any(`SELECT * FROM project_listings WHERE id = $1`, id);
+    return project;
+  } catch (e) {
+    return e;
+  }
+};
+
+module.exports = { getAllProjects, getListingById };
