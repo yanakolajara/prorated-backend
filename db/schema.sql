@@ -8,6 +8,7 @@ DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS contractors_services;
 DROP TABLE IF EXISTS contractors;
 DROP TABLE IF EXISTS services;
+DROP TABLE IF EXISTS project_listings;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -44,3 +45,12 @@ CREATE TABLE contractors_services (
     service_id INTEGER REFERENCES services(id)
     ON DELETE CASCADE
 );
+
+CREATE TABLE project_listings (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+    services_id INTEGER REFERENCES services(id) ON DELETE CASCADE,
+    title TEXT,
+    summary TEXT,
+    budget INT
+)

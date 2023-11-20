@@ -74,3 +74,12 @@ VALUES
   (9, 16),
   (10, 16),
   (10, 16);
+
+    INSERT INTO 
+  project_listings (user_id, services_id, title, summary, budget) 
+  VALUES 
+  (1, 12, 'Window Replacement', 'Looking for someone to replace my broken living room window ASAP', NULL ),
+  (2, 9, 'Termite Removal', 'Floor started squeaking a month ago and the wood around my house looks damaged. Need an expert!', 450),
+  (3, 1, 'Kitchen Remodel', 'We just built our first house and we are looking to redo the kitchen. Looking for an experienced renovator.', NULL),
+  (4, 6, 'Paint Job', '144sqft room to be painted. Paint supplied.', 125),
+  (5, 15, 'Home Security System', 'All the bells and whistles: windows, doors, garage, outside and fridge.', 2000);
