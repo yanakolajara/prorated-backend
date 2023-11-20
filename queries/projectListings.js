@@ -18,4 +18,13 @@ const getListingById = async (id) => {
   }
 };
 
-module.exports = { getAllProjects, getListingById };
+const createListing = async (data) => {
+    try {
+        const newProject = await db.any("INSERT INTO project_listings (user_id, services_id, title, summary, budget) VALUES ($1, $2,$3, $4, $5) RETURNING *", [data.user_id, data.services_id, data.title, data.summary, data.budget]);
+        return newProject;
+    } catch (e) {
+        return e;
+    }
+}
+
+module.exports = { getAllProjects, getListingById, createListing };

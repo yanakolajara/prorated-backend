@@ -4,6 +4,7 @@ const router = express.Router();
 const {
   getAllProjects,
   getListingById,
+  createListing,
 } = require("../queries/projectListings");
 
 router.get("/", async (req, res) => {
@@ -29,6 +30,11 @@ router.get("/:id", async (req, res) => {
   } else {
     return res.json(project[0]);
   }
+});
+
+router.post("/", async (req, res) => {
+  const newListing = await createListing(req.body);
+  return res.json(newListing);
 });
 
 module.exports = router;
