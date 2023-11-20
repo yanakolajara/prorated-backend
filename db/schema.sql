@@ -49,7 +49,7 @@ CREATE TABLE contractors_services (
 CREATE TABLE project_listings (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-    category INTEGER REFERENCES services(id) ON DELETE CASCADE,
+    services_id INTEGER REFERENCES services(id) ON DELETE CASCADE,
     title TEXT,
     summary TEXT,
     budget INT
