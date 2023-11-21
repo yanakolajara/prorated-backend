@@ -9,6 +9,18 @@ const getAllProjects = async () => {
   }
 };
 
+const getAllListingsByUser = async (userId) => {
+  try {
+    const allListingsFromUser = await db.any(
+      `SELECT * FROM project_listings WHERE user_id = $1 ORDER BY id ASC`,
+      userId
+    );
+    return allListingsFromUser;
+  } catch (e) {
+    return e;
+  }
+};
+
 const getListingById = async (id) => {
   try {
     const project = await db.any(
@@ -63,4 +75,5 @@ module.exports = {
   createListing,
   deleteListingById,
   updateListingById,
+  getAllListingsByUser,
 };

@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 
 const {
   getAllProjects,
@@ -7,6 +7,7 @@ const {
   createListing,
   deleteListingById,
   updateListingById,
+  getAllListingsByUser,
 } = require("../queries/projectListings");
 
 const {
@@ -22,6 +23,21 @@ router.get("/", async (req, res) => {
     return res.status(500).json({ Error: "Server Error. Please try again." });
   } else {
     return res.json(getProjects);
+  }
+});
+
+router.get("/all", async (req, res) => {
+  const { userId } = req.params;
+  const allListingsByUser = await getAllListingsByUser(userId);
+
+  if (allListingsByUser.length === 0) {
+    return res.status(404).json({
+      Error: "GET request unsuccessful",
+      message:
+        "Listings Not Found! Please check the user id you have entered and try again.",
+    });
+  } else {
+    return res.json(allListingsByUser);
   }
 });
 
@@ -55,7 +71,7 @@ router.delete("/:id", async (req, res) => {
   const { id } = req.params;
   const deletedListing = await deleteListingById(id);
 
-  if (deletedListing === 0) {
+  if (deletedListing.length === 0) {
     return res.status(404).json({
       Error: "DELETE request unsuccessful.",
       message:
@@ -74,8 +90,16 @@ router.put(
   async (req, res) => {
     const { id } = req.params;
     const updatedListing = await updateListingById(id, req.body);
-    console.log(updatedListing);
-    res.json(updatedListing);
+
+    if (updatedListing.length === 0) {
+      return res.status(404).json({
+        Error: "PUT request unsuccessful.",
+        message:
+          "Listing Not Found! Please try again or enter a different listing id.",
+      });
+    } else {
+      return res.json(updatedListing[0]);
+    }
   }
 );
 
