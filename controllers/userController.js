@@ -1,6 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
+const listingsController = require("../controllers/projectListingsController");
+
+router.use("/:userId/listings", listingsController);
+
 const {
   getAllUsers,
   getUserById,
