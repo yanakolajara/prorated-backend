@@ -6,6 +6,7 @@ const {
   getListingById,
   createListing,
   deleteListingById,
+  updateListingById,
 } = require("../queries/projectListings");
 
 router.get("/", async (req, res) => {
@@ -45,11 +46,19 @@ router.delete("/:id", async (req, res) => {
   if (deletedListing === 0) {
     return res.status(404).json({
       Error: "DELETE request unsuccessful.",
-      message: "Listing Not Found! Please try again or enter a different listing id.",
+      message:
+        "Listing Not Found! Please try again or enter a different listing id.",
     });
   } else {
     return res.json(deletedListing[0]);
   }
+});
+
+router.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  const updatedListing = await updateListingById(id, req.body);
+  console.log(updatedListing);
+  res.json(updatedListing);
 });
 
 module.exports = router;
