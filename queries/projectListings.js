@@ -27,4 +27,18 @@ const createListing = async (data) => {
     }
 }
 
-module.exports = { getAllProjects, getListingById, createListing };
+const deleteListingById = async (id) => {
+  try {
+    const deletedListing = await db.any(`DELETE FROM project_listings WHERE id = $1 RETURNING *`, id);
+    return deletedListing;
+  } catch (e) {
+    return e;
+  }
+}
+
+module.exports = {
+  getAllProjects,
+  getListingById,
+  createListing,
+  deleteListingById,
+};
