@@ -9,6 +9,12 @@ const {
   updateListingById,
 } = require("../queries/projectListings");
 
+const {
+  validateListingServiceId,
+  validateListingTitle,
+  validateListingSummary,
+} = require("../validations/checkListing");
+
 router.get("/", async (req, res) => {
   const getProjects = await getAllProjects();
 
@@ -34,10 +40,16 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
-  const newListing = await createListing(req.body);
-  return res.json(newListing);
-});
+router.post(
+  "/",
+  validateListingServiceId,
+  validateListingTitle,
+  validateListingSummary,
+  async (req, res) => {
+    const newListing = await createListing(req.body);
+    return res.json(newListing);
+  }
+);
 
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
@@ -54,11 +66,17 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-router.put("/:id", async (req, res) => {
-  const { id } = req.params;
-  const updatedListing = await updateListingById(id, req.body);
-  console.log(updatedListing);
-  res.json(updatedListing);
-});
+router.put(
+  "/:id",
+  validateListingServiceId,
+  validateListingTitle,
+  validateListingSummary,
+  async (req, res) => {
+    const { id } = req.params;
+    const updatedListing = await updateListingById(id, req.body);
+    console.log(updatedListing);
+    res.json(updatedListing);
+  }
+);
 
 module.exports = router;
