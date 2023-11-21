@@ -12,7 +12,7 @@ const getAllProjects = async () => {
 const getAllListingsByUser = async (userId) => {
   try {
     const allListingsFromUser = await db.any(
-      `SELECT * FROM project_listings WHERE user_id = $1 ORDER BY id ASC`,
+      `SELECT * FROM project_listings WHERE user_id = $1 ORDER BY id DESC`,
       userId
     );
     return allListingsFromUser;

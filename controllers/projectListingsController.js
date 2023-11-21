@@ -16,6 +16,7 @@ const {
   validateListingSummary,
 } = require("../validations/checkListing");
 
+
 router.get("/", async (req, res) => {
   const getProjects = await getAllProjects();
 
@@ -26,7 +27,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/all", async (req, res) => {
+router.get("/", async (req, res) => {
   const { userId } = req.params;
   const allListingsByUser = await getAllListingsByUser(userId);
 
