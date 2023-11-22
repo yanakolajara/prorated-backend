@@ -16,18 +16,11 @@ VALUES
   ('GreenScape Landscaping', 'Specializing in sustainable and creative landscaping solutions', 4.5, 28),
   ('Swift Roofing Experts', 'Swift and reliable roofing services with attention to detail', 4.9, 42),
   ('PlumbMasters', 'Your go-to experts for all plumbing needs, from repairs to installations', 4.7, 39),
-  ('Wired Wizards', 'Electrical wizards providing safe and efficient wiring solutions', 4.6, 31),
+  ('PowerSpark Electricians', 'Powerful solutions for all your electrical needs', 4.7, 37),
   ('ColorSplash Painters', 'Transforming spaces with a splash of colors and professional painting', 4.9, 47),
   ('FloorCrafters', 'Crafting beautiful and durable floors with precision and expertise', 4.8, 36),
   ('CoolBreeze HVAC', 'Keeping your home comfortable with top-notch HVAC maintenance', 4.7, 40),
-  ('BugBusters Pest Control', 'Busting bugs and pests to keep your home and business pest-free', 4.6, 29),
-  ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 4.8, 38),
-  ('IronGuard Fencing', 'Providing strong and aesthetically pleasing fence installations', 4.7, 33),
-  ('CrystalClear Windows', 'Experts in professional window replacement for energy-efficient homes', 4.9, 45),
-  ('ApplianceSavers', 'Saving your appliances with quick and reliable repair services', 4.5, 27),
-  ('BathBliss Remodeling', 'Bringing bliss to your bathroom with transformative remodeling', 4.8, 41),
-  ('SecureHaven Security', 'Creating secure havens with advanced home security installations', 4.9, 50),
-  ('PowerSpark Electricians', 'Powerful solutions for all your electrical needs', 4.7, 37);
+ ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 4.8, 38),
 
 
 INSERT INTO 
@@ -37,18 +30,11 @@ VALUES
   ('Landscaping Design', 'Customized landscaping design and implementation', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
   ('Roof Repair', 'Professional roof repair and maintenance', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
   ('Plumbing Services', 'Comprehensive plumbing solutions for homes and businesses', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Electrical Wiring', 'Safe and efficient electrical wiring installation and repair', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Painting Services', 'Interior and exterior painting services with a variety of color options', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+   ('Painting Services', 'Interior and exterior painting services with a variety of color options', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
   ('Flooring Installation', 'High-quality flooring installation for different types of flooring', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
   ('HVAC Maintenance', 'Regular maintenance and repair of heating, ventilation, and air conditioning systems', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Pest Control', 'Effective pest control services for homes and commercial spaces', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Carpentry and Woodwork', 'Custom carpentry and woodwork for various projects', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Fence Installation', 'Durable and aesthetically pleasing fence installation', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Window Replacement', 'Professional window replacement services for improved energy efficiency', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Appliance Repair', 'Quick and reliable repair services for household appliances', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Bathroom Remodeling', 'Transformative bathroom remodeling with modern designs', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Home Security Installation', 'Installation of advanced home security systems for enhanced safety', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Electrician', 'Skilled electricians for all your electrical needs', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg');
+ ('Carpentry and Woodwork', 'Custom carpentry and woodwork for various projects', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+('Electrician', 'Skilled electricians for all your electrical needs', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg');
 
 
 INSERT INTO
@@ -56,24 +42,24 @@ INSERT INTO
 VALUES
   (1, 1),
   (1, 3),
-  (2, 2),
-  (2, 10),
-  (3, 4),
-  (3, 11),
-  (4, 5),
-  (4, 14),
-  (5, 6),
-  (5, 15),
-  (6, 7),
-  (6, 8),
-  (7, 9),
-  (7, 12),
-  (8, 13),
-  (8, 16),
-  (9, 12),
-  (9, 16),
-  (10, 16),
-  (10, 16);
+  (2, 2), 
+  (3, 3),
+  (4, 4),
+  (5, 9),
+  (6, 5),
+  (7, 6),
+  (8, 7),
+  (9, 8);
 
-
-INSERT INTO reviews (contractor_id, user_id, review, rating) VALUES (1, 2,  'restaurant was awesome', 5, '2021-08-19');
+INSERT INTO 
+  project_listings (user_id, services_id, title, summary, budget) 
+  VALUES 
+  (1, 12, 'Window Replacement', 'Looking for someone to replace my broken living room window ASAP', NULL ),
+  (2, 9, 'Termite Removal', 'Floor started squeaking a month ago and the wood around my house looks damaged. Need an expert!', 450),
+  (3, 1, 'Kitchen Remodel', 'We just built our first house and we are looking to redo the kitchen. Looking for an experienced renovator.', NULL),
+  (4, 6, 'Paint Job', '144sqft room to be painted. Paint supplied.', 125),
+  (5, 15, 'Home Security System', 'All the bells and whistles: windows, doors, garage, outside and fridge.', 2000),
+  (1, 5, 'Laminated Tile Job', 'Supplies Included. 500sqft of flooring to do.', 4000),
+  (1, 2, 'Tree Pruning', 'Redwood tree in need of pruning, 60ft ', 650),
+  (1, 5, 'Outlet Issues', 'Outlet is not powering.', NULL),
+  (2, 4, 'Bathtub Clogged', 'Tub is stopped.', NULL);

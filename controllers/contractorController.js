@@ -3,8 +3,8 @@ const express = require("express");
 const contractor = express.Router();
 const {
   getAllContractors,
-  getContractorsByID,
-  getContractorsByService,
+  getContractorByID,
+  getContractorsByServiceId,
 } = require("../queries/contractor");
 
 // GET
@@ -13,7 +13,7 @@ contractor.get("/:id", async (req, res) => {
 
   try {
     const id = req.params.id;
-    const contractor = await getContractorsByID(id);
+    const contractor = await getContractorByID(id);
 
     if (contractor) {
       res.status(200).json(contractor);
@@ -28,21 +28,8 @@ contractor.get("/:id", async (req, res) => {
 
 contractor.get("/", async (req, res) => {
   try {
-    // Check if a service parameter is provided
-    const serviceName = req.query.service;
-
-    if (serviceName) {
-      // If a service name is provided, get contractors by service
-      const contractorsByService = await getContractorsByService(serviceName);
-
-      if (contractorsByService.length === 0) {
-        res.status(404).json({ error: "No Contractor Found for this service" });
-      } else {
-        res.status(201).json(contractorsByService);
-      }
-    } else {
-      // If no service parameter, get all contractors
-      const allContractors = await getAllContractors();
+    const allContractors = await getAllContractors();
+    console.log(allContractors);
 
       if (allContractors.length === 0) {
         res.status(404).json({ error: "No Contractor Found" });
@@ -53,6 +40,36 @@ contractor.get("/", async (req, res) => {
   } catch (e) {
     console.log(e);
     res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+contractor.get("/service/:id", async (req, res) => {
+  try {
+    const serviceId = req.params.id;
+    const allContractors = await getContractorsByServiceId(serviceId);
+    if (allContractors.length === 0) {
+      res.status(404).json({ error: "No Contractor Found" });
+    } else {
+      res.status(201).json(allContractors);
+    }
+  } catch (e) {
+    console.log(e);
+    return e.message;
+  }
+});
+
+contractor.get("/service/:id", async (req, res) => {
+  try {
+    const serviceId = req.params.id;
+    const allContractors = await getContractorsByServiceId(serviceId);
+    if (allContractors.length === 0) {
+      res.status(404).json({ error: "No Contractor Found" });
+    } else {
+      res.status(201).json(allContractors);
+    }
+  } catch (e) {
+    console.log(e);
+    return e.message;
   }
 });
 
