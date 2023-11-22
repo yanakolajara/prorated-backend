@@ -31,15 +31,14 @@ contractor.get("/", async (req, res) => {
     const allContractors = await getAllContractors();
     console.log(allContractors);
 
-      if (allContractors.length === 0) {
-        res.status(404).json({ error: "No Contractor Found" });
-      } else {
-        res.status(201).json(allContractors);
-      }
+    if (allContractors.length === 0) {
+      res.status(404).json({ error: "No Contractor Found" });
+    } else {
+      res.status(201).json(allContractors);
     }
   } catch (e) {
     console.log(e);
-    res.status(500).json({ message: "Internal server error" });
+    return e.message;
   }
 });
 
