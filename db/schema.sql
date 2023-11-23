@@ -26,8 +26,7 @@ CREATE TABLE contractors (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100),
     description TEXT NOT NULL,
-    ratings INT,
-    reviews INT
+    location TEXT NOT NULL
 );
 
 CREATE TABLE services (
@@ -54,3 +53,13 @@ CREATE TABLE contractors_services (
 --     summary TEXT NOT NULL,
 --     budget INT
 -- );
+
+
+CREATE TABLE reviews (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    contractor_id INTEGER NOT NULL REFERENCES contractors(id),
+    name VARCHAR(50) NOT NULL,
+    review TEXT NOT NULL,
+    rating INT NOT NULL CHECK(rating >=1 and rating <= 5),
+    date timestamp NOT NULL DEFAULT NOW()
+);

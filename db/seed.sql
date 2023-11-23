@@ -10,19 +10,19 @@ VALUES
   ('mike_jackson', 'p@ssw0rd', 'mike.jackson@example.com', 'Mike', 'Jackson', '555-876-1234', 'https://celebdial.s3.amazonaws.com/celeb_pic/michael-jackson.jpg', 'Miami');
 
 INSERT INTO
-  contractors(name, description, ratings, reviews)
+  contractors(name, description, location)
 VALUES
-  ('Smith Construction', 'General construction services for residential and commercial projects', 4.8, 35),
-  ('GreenScape Landscaping', 'Specializing in sustainable and creative landscaping solutions', 4.5, 28),
-  ('Swift Roofing Experts', 'Swift and reliable roofing services with attention to detail', 4.9, 42),
-  ('PlumbMasters', 'Your go-to experts for all plumbing needs, from repairs to installations', 4.7, 39),
-  ('PowerSpark Electricians', 'Powerful solutions for all your electrical needs', 4.7, 37),
-  ('ColorSplash Painters', 'Transforming spaces with a splash of colors and professional painting', 4.9, 47),
-  ('FloorCrafters', 'Crafting beautiful and durable floors with precision and expertise', 4.8, 36),
-  ('CoolBreeze HVAC', 'Keeping your home comfortable with top-notch HVAC maintenance', 4.7, 40),
-  ('PlumberMike', 'Keeping your home comfortable with top-notch HVAC maintenance', 4.7, 40),
-  ('PlumbingMike', 'Keeping your home comfortable with top-notch HVAC maintenance', 4.7, 40),
- ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 4.8, 38);
+  ('Smith Construction', 'General construction services for residential and commercial projects', 'Brooklyn'),
+  ('GreenScape Landscaping', 'Specializing in sustainable and creative landscaping solutions', 'Manhattan'),
+  ('Swift Roofing Experts', 'Swift and reliable roofing services with attention to detail', 'Brooklyn'),
+  ('PlumbMasters', 'Your go-to experts for all plumbing needs, from repairs to installations', 'Queens' ),
+  ('PowerSpark Electricians', 'Powerful solutions for all your electrical needs', 'Manhattan, Bronx'),
+  ('ColorSplash Painters', 'Transforming spaces with a splash of colors and professional painting', 'Staten Island'),
+  ('FloorCrafters', 'Crafting beautiful and durable floors with precision and expertise', 'NYC'),
+  ('CoolBreeze HVAC', 'Keeping your home comfortable with top-notch HVAC maintenance', 'Hempstead'),
+  ('PlumberMike', 'Keeping your home comfortable with top-notch HVAC maintenance', 'Manhattan'),
+  ('PlumbingMike', 'Keeping your home comfortable with top-notch HVAC maintenance', 'Queens'),
+ ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 'Bronx');
 
 
 INSERT INTO 

@@ -25,13 +25,14 @@ const getContractorByID = async (id) => {
 const getContractorsByServiceId = async (serviceId) => {
   try {
     const contractors = await db.any(
-      "SELECT contractors.name, contractors.description, contractors.ratings, contractors.reviews\
+      "SELECT contractors.name, contractors.description, contractors.location\
       FROM contractors\
       JOIN contractors_services\
       ON contractors.id = contractors_services.contractor_id\
       WHERE contractors_services.service_id = $1",
       [serviceId]
     );
+
     return contractors;
   } catch (error) {
     console.log(error);

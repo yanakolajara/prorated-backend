@@ -19,6 +19,7 @@ app.use(cors()); // Enable Cross Origin Resource Sharing
 
 // ROUTES
 app.use("/users", userController);
+
 app.use("/contractors", contractorController);
 app.use("/services", serviceController);
 app.use("/listings", projectListingsController);
