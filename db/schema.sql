@@ -9,6 +9,7 @@ DROP TABLE IF EXISTS contractors_services;
 DROP TABLE IF EXISTS contractors;
 DROP TABLE IF EXISTS services;
 DROP TABLE IF EXISTS project_listings;
+DROP TABLE IF EXISTS reviews;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
