@@ -46,11 +46,11 @@ CREATE TABLE contractors_services (
     ON DELETE CASCADE
 );
 
-CREATE TABLE project_listings (
-    id SERIAL PRIMARY KEY,
-    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-    services_id INTEGER REFERENCES services(id) ON DELETE CASCADE,
-    title TEXT NOT NULL,
-    summary TEXT NOT NULL,
-    budget INT
-)
+-- CREATE TABLE project_listings (
+--     id SERIAL PRIMARY KEY,
+--     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+--     services_id INTEGER REFERENCES services(id) ON DELETE CASCADE,
+--     title TEXT NOT NULL,
+--     summary TEXT NOT NULL,
+--     budget INT
+-- );

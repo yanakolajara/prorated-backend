@@ -20,7 +20,9 @@ VALUES
   ('ColorSplash Painters', 'Transforming spaces with a splash of colors and professional painting', 4.9, 47),
   ('FloorCrafters', 'Crafting beautiful and durable floors with precision and expertise', 4.8, 36),
   ('CoolBreeze HVAC', 'Keeping your home comfortable with top-notch HVAC maintenance', 4.7, 40),
- ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 4.8, 38),
+  ('PlumberMike', 'Keeping your home comfortable with top-notch HVAC maintenance', 4.7, 40),
+  ('PlumbingMike', 'Keeping your home comfortable with top-notch HVAC maintenance', 4.7, 40),
+ ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 4.8, 38);
 
 
 INSERT INTO 
@@ -42,24 +44,19 @@ INSERT INTO
 VALUES
   (1, 1),
   (1, 3),
-  (2, 2), 
+  (2, 2),
+ 
   (3, 3),
+ 
   (4, 4),
-  (5, 9),
-  (6, 5),
-  (7, 6),
-  (8, 7),
-  (9, 8);
 
-INSERT INTO 
-  project_listings (user_id, services_id, title, summary, budget) 
-  VALUES 
-  (1, 12, 'Window Replacement', 'Looking for someone to replace my broken living room window ASAP', NULL ),
-  (2, 9, 'Termite Removal', 'Floor started squeaking a month ago and the wood around my house looks damaged. Need an expert!', 450),
-  (3, 1, 'Kitchen Remodel', 'We just built our first house and we are looking to redo the kitchen. Looking for an experienced renovator.', NULL),
-  (4, 6, 'Paint Job', '144sqft room to be painted. Paint supplied.', 125),
-  (5, 15, 'Home Security System', 'All the bells and whistles: windows, doors, garage, outside and fridge.', 2000),
-  (1, 5, 'Laminated Tile Job', 'Supplies Included. 500sqft of flooring to do.', 4000),
-  (1, 2, 'Tree Pruning', 'Redwood tree in need of pruning, 60ft ', 650),
-  (1, 5, 'Outlet Issues', 'Outlet is not powering.', NULL),
-  (2, 4, 'Bathtub Clogged', 'Tub is stopped.', NULL);
+  (5, 9),
+ 
+  (6, 5),
+  
+  (7, 6),
+  
+  (8, 7),
+  
+  (9, 8);
+  
