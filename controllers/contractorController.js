@@ -71,5 +71,16 @@ contractor.get("/service/:id", async (req, res) => {
   }
 });
 
+contractor.post("/:id/addReview", async (req, res) => {
+  try {
+    const newReview = await addContractorReview(req.params.id, req.body);
+
+    console.log(newReview);
+    res.json(newReview);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 // EXPORT
 module.exports = contractor;
