@@ -1,11 +1,19 @@
 // DEPENDENCIES
 const express = require("express");
 const contractor = express.Router();
+const reviewsController = require("./reviewsController");
 const {
   getAllContractors,
   getContractorByID,
   getContractorsByServiceId,
 } = require("../queries/contractor");
+
+const {
+  getContractorReviews,
+  addContractorReview,
+} = require("../queries/review");
+
+contractor.use("/:contractorId/reviews", reviewsController);
 
 // GET
 contractor.get("/:id", async (req, res) => {
@@ -14,9 +22,15 @@ contractor.get("/:id", async (req, res) => {
   try {
     const id = req.params.id;
     const contractor = await getContractorByID(id);
+    const reviews = await getContractorReviews(id);
 
     if (contractor) {
-      res.status(200).json(contractor);
+      res.status(200).json({
+        data: {
+          contractor,
+          reviews,
+        },
+      });
     } else {
       res.status(404).json({ message: "No Contractor found by this id" });
     }
