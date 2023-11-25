@@ -6,6 +6,7 @@ const {
   getAllContractors,
   getContractorByID,
   getContractorsByServiceId,
+  getContractorRatingsData,
 } = require("../queries/contractor");
 
 const {
@@ -42,13 +43,15 @@ contractor.get("/:id", async (req, res) => {
 
 contractor.get("/", async (req, res) => {
   try {
-    const allContractors = await getAllContractors();
-    console.log(allContractors);
+    // const allContractors = await getAllContractors();
+    // console.log(allContractors);
 
-    if (allContractors.length === 0) {
+    const allContractorsData = await getContractorRatingsData();
+
+    if (allContractorsData.length === 0) {
       res.status(404).json({ error: "No Contractor Found" });
     } else {
-      res.status(201).json(allContractors);
+      res.status(201).json(allContractorsData);
     }
   } catch (e) {
     console.log(e);
