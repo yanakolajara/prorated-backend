@@ -8,6 +8,8 @@ const {
   deleteListingById,
   updateListingById,
   getAllListingsByUser,
+  getAllActiveListingsFromUser,
+  getAllCompletedListingsFromUser,
 } = require("../queries/projectListings");
 
 const {
@@ -38,6 +40,38 @@ router.get("/all", async (req, res) => {
     });
   } else {
     return res.json(allListingsByUser);
+  }
+});
+
+router.get("/all/active", async (req, res) => {
+  const { userId } = req.params;
+  const getActiveListingsByUser = await getAllActiveListingsFromUser(userId);
+
+  if (getActiveListingsByUser.length === 0) {
+    return res.status(404).json({
+      Error: "GET request unsuccessful",
+      message:
+        "Active Listings Not Found! Please check the user id you have entered and try again.",
+    });
+  } else {
+    return res.json(getActiveListingsByUser);
+  }
+});
+
+router.get("/all/completed", async (req, res) => {
+  const { userId } = req.params;
+  const getCompletedListingsByUser = await getAllCompletedListingsFromUser(
+    userId
+  );
+
+  if (getCompletedListingsByUser.length === 0) {
+    return res.status(404).json({
+      Error: "GET request unsuccessful",
+      message:
+        "Completed Listings Not Found! Please check the user id you have entered and try again.",
+    });
+  } else {
+    return res.json(getCompletedListingsByUser);
   }
 });
 

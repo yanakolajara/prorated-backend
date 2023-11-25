@@ -52,5 +52,6 @@ CREATE TABLE project_listings (
     services_id INTEGER REFERENCES services(id) ON DELETE CASCADE,
     title TEXT NOT NULL,
     summary TEXT NOT NULL,
-    budget INT
+    budget INT,
+    completed boolean DEFAULT FALSE
 )
