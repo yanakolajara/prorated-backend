@@ -10,17 +10,19 @@ VALUES
   ('mike_jackson', 'p@ssw0rd', 'mike.jackson@example.com', 'Mike', 'Jackson', '555-876-1234', 'https://celebdial.s3.amazonaws.com/celeb_pic/michael-jackson.jpg', 'Miami');
 
 INSERT INTO
-  contractors(name, description, ratings, reviews)
+  contractors(name, description, location)
 VALUES
-  ('Smith Construction', 'General construction services for residential and commercial projects', 4.8, 35),
-  ('GreenScape Landscaping', 'Specializing in sustainable and creative landscaping solutions', 4.5, 28),
-  ('Swift Roofing Experts', 'Swift and reliable roofing services with attention to detail', 4.9, 42),
-  ('PlumbMasters', 'Your go-to experts for all plumbing needs, from repairs to installations', 4.7, 39),
-  ('PowerSpark Electricians', 'Powerful solutions for all your electrical needs', 4.7, 37),
-  ('ColorSplash Painters', 'Transforming spaces with a splash of colors and professional painting', 4.9, 47),
-  ('FloorCrafters', 'Crafting beautiful and durable floors with precision and expertise', 4.8, 36),
-  ('CoolBreeze HVAC', 'Keeping your home comfortable with top-notch HVAC maintenance', 4.7, 40),
- ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 4.8, 38),
+  ('Smith Construction', 'General construction services for residential and commercial projects', 'Brooklyn'),
+  ('GreenScape Landscaping', 'Specializing in sustainable and creative landscaping solutions', 'Manhattan'),
+  ('Swift Roofing Experts', 'Swift and reliable roofing services with attention to detail', 'Brooklyn'),
+  ('PlumbMasters', 'Your go-to experts for all plumbing needs, from repairs to installations', 'Queens' ),
+  ('PowerSpark Electricians', 'Powerful solutions for all your electrical needs', 'Manhattan, Bronx'),
+  ('ColorSplash Painters', 'Transforming spaces with a splash of colors and professional painting', 'Staten Island'),
+  ('FloorCrafters', 'Crafting beautiful and durable floors with precision and expertise', 'NYC'),
+  ('CoolBreeze HVAC', 'Keeping your home comfortable with top-notch HVAC maintenance', 'Hempstead'),
+  ('PlumberMike', 'Keeping your home comfortable with top-notch HVAC maintenance', 'Manhattan'),
+  ('PlumbingMike', 'Keeping your home comfortable with top-notch HVAC maintenance', 'Queens'),
+ ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 'Bronx');
 
 
 INSERT INTO 
@@ -42,24 +44,22 @@ INSERT INTO
 VALUES
   (1, 1),
   (1, 3),
-  (2, 2), 
+  (2, 2),
+ 
   (3, 3),
+ 
   (4, 4),
-  (5, 9),
-  (6, 5),
-  (7, 6),
-  (8, 7),
-  (9, 8);
 
-INSERT INTO 
-  project_listings (user_id, services_id, title, summary, budget) 
-  VALUES 
-  (1, 12, 'Window Replacement', 'Looking for someone to replace my broken living room window ASAP', NULL ),
-  (2, 9, 'Termite Removal', 'Floor started squeaking a month ago and the wood around my house looks damaged. Need an expert!', 450),
-  (3, 1, 'Kitchen Remodel', 'We just built our first house and we are looking to redo the kitchen. Looking for an experienced renovator.', NULL),
-  (4, 6, 'Paint Job', '144sqft room to be painted. Paint supplied.', 125),
-  (5, 15, 'Home Security System', 'All the bells and whistles: windows, doors, garage, outside and fridge.', 2000),
-  (1, 5, 'Laminated Tile Job', 'Supplies Included. 500sqft of flooring to do.', 4000),
-  (1, 2, 'Tree Pruning', 'Redwood tree in need of pruning, 60ft ', 650),
-  (1, 5, 'Outlet Issues', 'Outlet is not powering.', NULL),
-  (2, 4, 'Bathtub Clogged', 'Tub is stopped.', NULL);
+  (5, 9),
+ 
+  (6, 5),
+  
+  (7, 6),
+  
+  (8, 7),
+  
+  (9, 8);
+  
+
+INSERT INTO reviews(contractor_id, name, review, rating)
+VALUES (1, 'carl', 'great service', 5), (1, 'mike', 'ok service', 3), (2, 'juan', 'i could do better', 1);

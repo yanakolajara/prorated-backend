@@ -10,6 +10,7 @@ const userController = require("./controllers/userController");
 const contractorController = require("./controllers/contractorController");
 const serviceController = require("./controllers/serviceController");
 const projectListingsController = require("./controllers/projectListingsController");
+const reviewsController = require("./controllers/reviewsController");
 
 // CONFIG
 const app = express();
@@ -21,9 +22,11 @@ app.use(cors()); // Enable Cross Origin Resource Sharing
 
 // ROUTES
 app.use("/users", userController);
+
 app.use("/contractors", contractorController);
 app.use("/services", serviceController);
 app.use("/listings", projectListingsController);
+app.use("/reviews", reviewsController);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");

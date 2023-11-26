@@ -10,10 +10,22 @@ const getAllContractors = async () => {
   }
 };
 
+const getContractorRatingsData = async () => {
+  try {
+    const allRatingsData = await db.any(
+      "select * from contractors left join (select contractor_id, COUNT(*), TRUNC(AVG(rating),1) as average_rating from reviews group by contractor_id) reviews on contractors.id = reviews.contractor_id;"
+    );
+    return allRatingsData;
+  } catch (e) {
+    console.log(e);
+    return e.message;
+  }
+};
+
 const getContractorByID = async (id) => {
   try {
     const contractor = await db.oneOrNone(
-      "SELECT * FROM contractors WHERE id = $1",
+      "select * from contractors left join (select contractor_id, COUNT(*), TRUNC(AVG(rating),1) as average_rating from reviews group by contractor_id) reviews on contractors.id = reviews.contractor_id where id = $1",
       [id]
     );
     return contractor;
@@ -25,13 +37,14 @@ const getContractorByID = async (id) => {
 const getContractorsByServiceId = async (serviceId) => {
   try {
     const contractors = await db.any(
-      "SELECT contractors.name, contractors.description, contractors.ratings, contractors.reviews\
+      "SELECT contractors.name, contractors.description, contractors.location\
       FROM contractors\
       JOIN contractors_services\
       ON contractors.id = contractors_services.contractor_id\
       WHERE contractors_services.service_id = $1",
       [serviceId]
     );
+
     return contractors;
   } catch (error) {
     console.log(error);
@@ -42,4 +55,5 @@ module.exports = {
   getAllContractors,
   getContractorByID,
   getContractorsByServiceId,
+  getContractorRatingsData,
 };

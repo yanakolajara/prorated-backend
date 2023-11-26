@@ -1,11 +1,20 @@
 // DEPENDENCIES
 const express = require("express");
 const contractor = express.Router();
+const reviewsController = require("./reviewsController");
 const {
   getAllContractors,
   getContractorByID,
   getContractorsByServiceId,
+  getContractorRatingsData,
 } = require("../queries/contractor");
+
+const {
+  getContractorReviews,
+  addContractorReview,
+} = require("../queries/review");
+
+contractor.use("/:contractorId/reviews", reviewsController);
 
 // GET
 contractor.get("/:id", async (req, res) => {
@@ -14,9 +23,15 @@ contractor.get("/:id", async (req, res) => {
   try {
     const id = req.params.id;
     const contractor = await getContractorByID(id);
+    const reviews = await getContractorReviews(id);
 
     if (contractor) {
-      res.status(200).json(contractor);
+      res.status(200).json({
+        data: {
+          contractor,
+          reviews,
+        },
+      });
     } else {
       res.status(404).json({ message: "No Contractor found by this id" });
     }
@@ -28,13 +43,15 @@ contractor.get("/:id", async (req, res) => {
 
 contractor.get("/", async (req, res) => {
   try {
-    const allContractors = await getAllContractors();
-    console.log(allContractors);
+    // const allContractors = await getAllContractors();
+    // console.log(allContractors);
 
-    if (allContractors.length === 0) {
+    const allContractorsData = await getContractorRatingsData();
+
+    if (allContractorsData.length === 0) {
       res.status(404).json({ error: "No Contractor Found" });
     } else {
-      res.status(201).json(allContractors);
+      res.status(201).json(allContractorsData);
     }
   } catch (e) {
     console.log(e);
@@ -57,6 +74,17 @@ contractor.get("/service/:id", async (req, res) => {
   }
 });
 
+contractor.post("/:id/addReview", async (req, res) => {
+  try {
+    const newReview = await addContractorReview(req.params.id, req.body);
+
+    console.log(newReview);
+    res.json(newReview);
+  } catch (error) {
+    console.log(error);
+  }
+});  
+
 contractor.get("/service/:id", async (req, res) => {
   try {
     const serviceId = req.params.id;
@@ -69,6 +97,7 @@ contractor.get("/service/:id", async (req, res) => {
   } catch (e) {
     console.log(e);
     return e.message;
+
   }
 });
 
