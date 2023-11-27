@@ -9,20 +9,29 @@ VALUES
   ('sarah_white', '12345678', 'sarah.white@example.com', 'Sarah', 'White', '555-234-5678', 'https://cloudfront-us-east-2.images.arcpublishing.com/reuters/EHAIKCVG6NLBNNVXZE7AXPAAJ4.jpg', 'San Francisco'),
   ('mike_jackson', 'p@ssw0rd', 'mike.jackson@example.com', 'Mike', 'Jackson', '555-876-1234', 'https://celebdial.s3.amazonaws.com/celeb_pic/michael-jackson.jpg', 'Miami');
 
-INSERT INTO
-  contractors(name, description, location)
+INSERT INTO contractors (name, description, jobtitle, location, experience, contact, phone_number)
 VALUES
-  ('Smith Construction', 'General construction services for residential and commercial projects', 'Brooklyn'),
-  ('GreenScape Landscaping', 'Specializing in sustainable and creative landscaping solutions', 'Manhattan'),
-  ('Swift Roofing Experts', 'Swift and reliable roofing services with attention to detail', 'Brooklyn'),
-  ('PlumbMasters', 'Your go-to experts for all plumbing needs, from repairs to installations', 'Queens' ),
-  ('PowerSpark Electricians', 'Powerful solutions for all your electrical needs', 'Manhattan, Bronx'),
-  ('ColorSplash Painters', 'Transforming spaces with a splash of colors and professional painting', 'Staten Island'),
-  ('FloorCrafters', 'Crafting beautiful and durable floors with precision and expertise', 'NYC'),
-  ('CoolBreeze HVAC', 'Keeping your home comfortable with top-notch HVAC maintenance', 'Hempstead'),
-  ('PlumberMike', 'Keeping your home comfortable with top-notch HVAC maintenance', 'Manhattan'),
-  ('PlumbingMike', 'Keeping your home comfortable with top-notch HVAC maintenance', 'Queens'),
- ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 'Bronx');
+('Smith Construction', 'General construction services for residential and commercial projects', 'Construction Manager', 'City ABC', 4.8, 'smith@example.com', '987-654-3210' 
+),
+   ('GreenScape Landscaping', 'Specializing in sustainable and creative landscaping solutions', 'Landscaping Specialist', 'City PQR', 4.5, 'greenscape@example.com', '111-222-3333'
+),
+  ('Swift Roofing Experts', 'Swift and reliable roofing services with attention to detail', 'Roofing Expert', 'City DEF', 4.9, 'swiftroofing@example.com', '555-666-7777' 
+ ),
+  ('PlumbMasters', 'Your go-to experts for all plumbing needs, from repairs to installations', 'Master Plumber', 'City GHI', 4.7, 'plumbmasters@example.com', '999-888-7777' 
+   ),
+  ('PowerSpark Electricians', 'Powerful solutions for all your electrical needs', 'Electrical Specialist', 'City MNO', 4.7, 'powerspark@example.com', '333-444-5555'
+   ),
+  ('ColorSplash Painters', 'Transforming spaces with a splash of colors and professional painting', 'Professional Painter', 'City LMN', 4.9, 'colorsplash@example.com', '777-888-9999' 
+  ),
+  
+  ('FloorCrafters', 'Crafting beautiful and durable floors with precision and expertise', 'Flooring Specialist', 'City XYZ', 4.8, 'floorcrafters@example.com', '222-333-4444' 
+  ),
+  
+  ('CoolBreeze HVAC', 'Keeping your home comfortable with top-notch HVAC maintenance', 'HVAC Technician', 'City UVW', 4.7, 'coolbreeze@example.com', '666-777-8888' 
+  ),
+  
+  ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 'Carpentry Expert', 'City JKL', 4.8, 'mastercrafter@example.com', '444-555-6666'
+  );
 
 
 INSERT INTO 
