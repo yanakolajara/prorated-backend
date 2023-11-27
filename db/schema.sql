@@ -25,9 +25,13 @@ CREATE TABLE users (
 
 CREATE TABLE contractors (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
-    description TEXT NOT NULL,
-    location TEXT NOT NULL
+    name VARCHAR(255),
+    description TEXT,
+    jobtitle VARCHAR(100),
+    location VARCHAR(100),
+    experience INTEGER,
+    contact VARCHAR(255),
+    phone_number VARCHAR(15)
 );
 
 CREATE TABLE services (
