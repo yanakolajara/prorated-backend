@@ -83,6 +83,22 @@ contractor.post("/:id/addReview", async (req, res) => {
   } catch (error) {
     console.log(error);
   }
+});  
+
+contractor.get("/service/:id", async (req, res) => {
+  try {
+    const serviceId = req.params.id;
+    const allContractors = await getContractorsByServiceId(serviceId);
+    if (allContractors.length === 0) {
+      res.status(404).json({ error: "No Contractor Found" });
+    } else {
+      res.status(201).json(allContractors);
+    }
+  } catch (e) {
+    console.log(e);
+    return e.message;
+
+  }
 });
 
 // EXPORT
