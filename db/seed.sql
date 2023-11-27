@@ -20,7 +20,7 @@ VALUES
   ('ColorSplash Painters', 'Transforming spaces with a splash of colors and professional painting', 4.9, 47),
   ('FloorCrafters', 'Crafting beautiful and durable floors with precision and expertise', 4.8, 36),
   ('CoolBreeze HVAC', 'Keeping your home comfortable with top-notch HVAC maintenance', 4.7, 40),
- ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 4.8, 38),
+ ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 4.8, 38);
 
 
 INSERT INTO 
