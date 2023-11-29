@@ -7,7 +7,6 @@ const cors = require("cors");
 // CONTROLLERS
 const contractorController = require("./controllers/contractorController");
 const userController = require("./controllers/userController");
-const contractorController = require("./controllers/contractorController");
 const serviceController = require("./controllers/serviceController");
 const projectListingsController = require("./controllers/projectListingsController");
 const reviewsController = require("./controllers/reviewsController");
