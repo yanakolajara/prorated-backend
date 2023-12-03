@@ -13,6 +13,18 @@ const getContractorReviews = async (contractorId) => {
   }
 };
 
+const getUserReviews = async (userId) => {
+  try {
+    const userReviews = await db.any(
+      "SELECT * FROM reviews WHERE user_id = $1",
+      [userId]
+    );
+    return userReviews;
+  } catch (e) {
+    return e.message;
+  }
+};
+
 const addContractorReview = async (id, data) => {
   try {
     console.log(data);
@@ -30,4 +42,5 @@ const addContractorReview = async (id, data) => {
 module.exports = {
   getContractorReviews,
   addContractorReview,
+  getUserReviews,
 };
