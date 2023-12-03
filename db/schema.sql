@@ -19,7 +19,7 @@ CREATE TABLE users (
   first_name VARCHAR(255),
   last_name VARCHAR(255),
   phone_number VARCHAR(15),
-  profile_picture VARCHAR(255),
+  profile_picture VARCHAR,
   location VARCHAR(100)
 );
 
