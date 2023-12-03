@@ -36,7 +36,7 @@ router.get("/:id", async (req, res) => {
   const user = await getUserById(id);
   const reviews = await getUserReviews(id);
 
-  if (user.length === 0) {
+  if (!user) {
     res.status(404).json({ error: "not found" });
   } else {
     // res.json(user[0]);
