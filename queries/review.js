@@ -25,12 +25,12 @@ const getUserReviews = async (userId) => {
   }
 };
 
-const addContractorReview = async (id, data) => {
+const addContractorReview = async (id, userId, data) => {
   try {
     console.log(data);
     const addedReview = await db.one(
-      "INSERT INTO reviews (contractor_id, name, review, rating) values ($1, $2, $3, $4) RETURNING *",
-      [id, data.name, data.review, data.rating]
+      "INSERT INTO reviews (contractor_id, user_id, review, rating) values ($1, $2, $3, $4) RETURNING *",
+      [id, userId, data.review, data.rating]
     );
     return addedReview;
   } catch (e) {
