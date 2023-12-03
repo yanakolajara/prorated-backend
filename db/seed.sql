@@ -33,7 +33,6 @@ VALUES
   ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 'Carpentry Expert', 'City JKL', 4.8, 'mastercrafter@example.com', '444-555-6666'
   );
 
-
 INSERT INTO 
   services(name, description, custom, image)
 VALUES
