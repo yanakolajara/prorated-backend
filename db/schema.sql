@@ -4,12 +4,12 @@ CREATE DATABASE prorated_dev;
 
 \c prorated_dev;
 
-DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS contractors_services;
-DROP TABLE IF EXISTS contractors;
-DROP TABLE IF EXISTS services;
 DROP TABLE IF EXISTS project_listings;
-DROP TABLE IF EXISTS reviews;
+DROP TABLE IF EXISTS reviews CASCADE;
+DROP TABLE IF EXISTS contractors CASCADE;
+DROP TABLE IF EXISTS services CASCADE;
+DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
