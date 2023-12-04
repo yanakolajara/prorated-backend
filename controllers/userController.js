@@ -9,6 +9,7 @@ const {
   getAllUsers,
   getUserById,
   addUser,
+  login,
   updateUser,
   deleteUser,
 } = require("../queries/users");
@@ -42,6 +43,16 @@ router.post("/", checkUsername, validateURL, async (req, res) => {
   const newUser = await addUser(req.body);
   console.log(newUser);
   res.json(newUser);
+});
+
+router.post("/login", async (req, res) => {
+  try {
+    const foundUser = await login(req.body);
+
+    res.json(foundUser);
+  } catch (error) {
+    res.status(500).json({ message: e.message, error: e.error });
+  }
 });
 
 router.delete("/:id", async (req, res) => {
