@@ -2,8 +2,10 @@ const express = require("express");
 const router = express.Router();
 
 const listingsController = require("../controllers/projectListingsController");
+const reviewsController = require("./reviewsController");
 
 router.use("/:userId/listings", listingsController);
+router.use("/:usedId/reviews", reviewsController);
 
 const {
   getAllUsers,
@@ -13,6 +15,8 @@ const {
   updateUser,
   deleteUser,
 } = require("../queries/users");
+
+const { getUserReviews } = require("../queries/review");
 
 const { checkUsername, validateURL } = require("../validations/checkUsers");
 
@@ -31,11 +35,18 @@ router.get("/:id", async (req, res) => {
   const id = req.params.id;
 
   const user = await getUserById(id);
+  const reviews = await getUserReviews(id);
 
-  if (user.length === 0) {
+  if (!user) {
     res.status(404).json({ error: "not found" });
   } else {
-    res.json(user[0]);
+    // res.json(user[0]);
+    res.status(200).json({
+      data: {
+        user,
+        reviews,
+      },
+    });
   }
 });
 

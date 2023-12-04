@@ -13,12 +13,24 @@ const getContractorReviews = async (contractorId) => {
   }
 };
 
-const addContractorReview = async (id, data) => {
+const getUserReviews = async (userId) => {
+  try {
+    const userReviews = await db.any(
+      "SELECT * FROM reviews WHERE user_id = $1",
+      [userId]
+    );
+    return userReviews;
+  } catch (e) {
+    return e.message;
+  }
+};
+
+const addContractorReview = async (id, userId, data) => {
   try {
     console.log(data);
     const addedReview = await db.one(
-      "INSERT INTO reviews (contractor_id, name, review, rating) values ($1, $2, $3, $4) RETURNING *",
-      [id, data.name, data.review, data.rating]
+      "INSERT INTO reviews (contractor_id, user_id, review, rating) values ($1, $2, $3, $4) RETURNING *",
+      [id, userId, data.review, data.rating]
     );
     return addedReview;
   } catch (e) {
@@ -30,4 +42,5 @@ const addContractorReview = async (id, data) => {
 module.exports = {
   getContractorReviews,
   addContractorReview,
+  getUserReviews,
 };

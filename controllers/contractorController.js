@@ -74,16 +74,20 @@ contractor.get("/service/:id", async (req, res) => {
   }
 });
 
-contractor.post("/:id/addReview", async (req, res) => {
+contractor.post("/:id/user/:userId/addReview", async (req, res) => {
   try {
-    const newReview = await addContractorReview(req.params.id, req.body);
+    const newReview = await addContractorReview(
+      req.params.id,
+      req.params.userId,
+      req.body
+    );
 
     console.log(newReview);
     res.json(newReview);
   } catch (error) {
     console.log(error);
   }
-});  
+});
 
 contractor.get("/service/:id", async (req, res) => {
   try {
@@ -97,7 +101,6 @@ contractor.get("/service/:id", async (req, res) => {
   } catch (e) {
     console.log(e);
     return e.message;
-
   }
 });
 

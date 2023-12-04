@@ -14,7 +14,11 @@ const getAllUsers = async () => {
 // read a single user.
 const getUserById = async (id) => {
   try {
-    const user = await db.any(`SELECT * FROM users WHERE id = $1`, id);
+    // const user = await db.any(`SELECT * FROM users WHERE id = $1`, id);
+    const user = await db.oneOrNone(
+      "select * from users left join (select user_id, COUNT(*) from reviews group by user_id) reviews on users.id = reviews.user_id where id = $1",
+      [id]
+    );
 
     return user;
   } catch (error) {

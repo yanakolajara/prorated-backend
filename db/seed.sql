@@ -69,5 +69,5 @@ VALUES
   (9, 8);
   
 
-INSERT INTO reviews(contractor_id, name, review, rating)
-VALUES (1, 'carl', 'great service', 5), (1, 'mike', 'ok service', 3), (2, 'juan', 'i could do better', 1);
+INSERT INTO reviews(contractor_id, user_id, review, rating)
+VALUES (1, 1, 'great service', 5), (1, 2, 'ok service', 3), (2, 3, 'i could do better', 1);
