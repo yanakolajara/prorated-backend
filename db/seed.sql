@@ -71,3 +71,44 @@ VALUES
 
 INSERT INTO reviews(contractor_id, name, review, rating)
 VALUES (1, 'carl', 'great service', 5), (1, 'mike', 'ok service', 3), (2, 'juan', 'i could do better', 1);
+
+
+
+
+INSERT INTO images (contractor_id, image_url)
+VALUES
+  (1, 'https://www.cookremodeling.com/wp-content/uploads/general-contractor-01.jpg'),
+  (1, 'http://st.depositphotos.com/1758504/2325/i/450/depositphotos_23254310-Male-construction-workers-pointing-at-house-under-construction.jpg'),
+  (1, 'https://www.fortrockconstruction.com/uploads/1/0/5/4/105498039/istock-991867390-web_orig.jpg'),
+  (1, 'https://aircontrolsnc.com/wp-content/uploads/2020/04/Stairs1-500x500.jpg'),
+  (1, 'https://aircontrolsnc.com/wp-content/uploads/2020/04/JF-6300sf-Home0-730x400.jpg'),
+  (2, 'https://ogradyslandscape.com/wp-content/uploads/2012/09/services_general.jpg'),
+  (2, 'https://s42814.pcdn.co/wp-content/uploads/2020/01/Landscaping-iStock-498015683.0-768x576-300x300.jpg.webp'),
+  (2, 'https://tjsgenerallandscaping.com/photo/tjsgenerallandscapingcom/general-landscaping.jpg'),
+  (2, 'https://carolinaserviceslandscaping.com/wp-content/uploads/2021/07/carolina_grounds_hiring_landscapers.jpg'),
+  (2, 'https://forevergreenlandscaper.com/wp-content/uploads/2020/09/west-palm-beach-florida-lawn-care-services-300x200.jpg'),
+  (3, 'https://www.paramountroof.com/wp-content/uploads/roof-repair-roof-replace.jpg'),
+  (3, 'https://4aroofing.com/wp-content/uploads/2022/07/Questions-To-Ask-Your-Roofing-Contractor.jpg'),
+  (3, 'https://www.bryantx.gov/wp-content/uploads/2018/04/roof-repairs.jpg'),
+  (3, 'https://primeroofingfl.com/wp-content/uploads/roofing-contractor-at-work.jpg'),
+  (3, 'https://lirp.cdn-website.com/91d816be/dms3rep/multi/opt/7-432w.jpg'),
+  (4, 'https://lirp.cdn-website.com/ca0987e6/dms3rep/multi/opt/GettyImages-1204813771-698w.jpg'),
+  (4, 'https://rocketcert.com/images/category/construction/plumbingtraineeR.jpg'),
+  (4, 'https://halbrookplumbing.com/wp-content/uploads/2018/01/demo-image-2.jpg'),
+  (4, 'https://www.callrobertsplumbing.com/design/pages/plumbing-service/new-construction-3.jpg'),
+  (4, 'https://pvu.thebluebook.com/inc/img/qp/53533/plumbing-services.jpg'),
+  (5, 'https://www.homeadvisor.com/r/wp-content/uploads/2016/01/two-electricians-working.jpeg'),
+  (5, 'https://www.nextinsurance.com/wp-content/uploads/2019/12/december_2019_17-300x300.jpg'),
+  (5, 'https://www.ahelectric.com/wp-content/uploads/2019/08/electric-box.jpg'),
+  (5, 'https://www.espelectrical.net/fbm-data/images/pages/lighting-installation.jpg'),
+  (5, 'https://thumbs.dreamstime.com/b/electrician-worker-installation-electric-lamps-light-inside-apartment-construction-decoration-concept-electrician-worker-180152652.jpg'),
+  (6, 'https://certapro.com/milwaukee/wp-content/uploads/sites/1296/cache/2018/08/z_footer/3702568283.jpg'),
+  (6, 'https://procrewschedule.com/wp-content/uploads/2021/06/painting-img-2-cmp.jpg'),
+  (6, 'https://www.housepaintinginc.com/images/interior/reseda-house.jpg'),
+  (6, 'https://lirp.cdn-website.com/d1d8c52f/dms3rep/multi/opt/home+remodeling+mission+viejo+CA-396w.jpg'),
+  (6, 'https://acleanlook.com/wp-content/uploads/2023/03/interiorpaint1_before-300x300.jpg'),
+  (7, 'https://www.qf4l.com/wp-content/uploads/2017/12/Why-Hire-Professional-Flooring-Contractors.jpg'),
+  (7, 'https://images.finehomebuilding.com/app/uploads/2014/02/10172728/project-house-wood-floor-repair-16x9-thumb-16x9.jpg'),
+  (7, 'https://concetticontracting.com/wp-content/uploads/2014/09/tile-flooring-300x296.jpg'),
+  (7, 'https://dynamicprotectivecoat.com/wp-content/uploads/2022/10/Flooring-Contractor-in-Maryland-Heights-MO-1-300x200.jpg'),
+  (7, 'https://kelmwoodflooring.com/images/floor_refinishing_2_375x250-OptimizedSmushed.jpg');

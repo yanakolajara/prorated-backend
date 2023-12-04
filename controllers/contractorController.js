@@ -7,6 +7,7 @@ const {
   getContractorByID,
   getContractorsByServiceId,
   getContractorRatingsData,
+  getImages,
 } = require("../queries/contractor");
 
 const {
@@ -83,7 +84,7 @@ contractor.post("/:id/addReview", async (req, res) => {
   } catch (error) {
     console.log(error);
   }
-});  
+});
 
 contractor.get("/service/:id", async (req, res) => {
   try {
@@ -97,7 +98,6 @@ contractor.get("/service/:id", async (req, res) => {
   } catch (e) {
     console.log(e);
     return e.message;
-
   }
 });
 

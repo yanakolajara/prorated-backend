@@ -28,6 +28,16 @@ const getContractorByID = async (id) => {
       "select * from contractors left join (select contractor_id, COUNT(*), TRUNC(AVG(rating),1) as average_rating from reviews group by contractor_id) reviews on contractors.id = reviews.contractor_id where id = $1",
       [id]
     );
+
+    const images = await db.any(
+      "SELECT images.* FROM images JOIN contractors ON images.contractor_id = contractors.id WHERE contractors.id = $1",
+      [id]
+    );
+
+    if (contractor) {
+      contractor.images = images;
+    }
+
     return contractor;
   } catch (e) {
     console.log(e);

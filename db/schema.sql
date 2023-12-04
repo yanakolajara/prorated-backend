@@ -68,3 +68,10 @@ CREATE TABLE reviews (
     rating INT NOT NULL CHECK(rating >=1 and rating <= 5),
     date timestamp NOT NULL DEFAULT NOW()
 );
+
+
+CREATE TABLE images (
+  id SERIAL PRIMARY KEY,
+  contractor_id INTEGER REFERENCES contractors(id) ON DELETE CASCADE,
+  image_url TEXT
+);
