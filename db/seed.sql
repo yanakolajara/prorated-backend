@@ -52,14 +52,14 @@ VALUES
   (9, 8);
 
 INSERT INTO 
-  project_listings (user_id, services_id, title, summary, budget) 
+  project_listings (user_id, services_id, title, summary, budget, completed) 
   VALUES 
-  (1, 12, 'Window Replacement', 'Looking for someone to replace my broken living room window ASAP', NULL ),
-  (2, 9, 'Termite Removal', 'Floor started squeaking a month ago and the wood around my house looks damaged. Need an expert!', 450),
-  (3, 1, 'Kitchen Remodel', 'We just built our first house and we are looking to redo the kitchen. Looking for an experienced renovator.', NULL),
-  (4, 6, 'Paint Job', '144sqft room to be painted. Paint supplied.', 125),
-  (5, 15, 'Home Security System', 'All the bells and whistles: windows, doors, garage, outside and fridge.', 2000),
-  (1, 5, 'Laminated Tile Job', 'Supplies Included. 500sqft of flooring to do.', 4000),
-  (1, 2, 'Tree Pruning', 'Redwood tree in need of pruning, 60ft ', 650),
-  (1, 5, 'Outlet Issues', 'Outlet is not powering.', NULL),
-  (2, 4, 'Bathtub Clogged', 'Tub is stopped.', NULL);
+  (1, 12, 'Window Replacement', 'Looking for someone to replace my broken living room window ASAP', NULL, FALSE),
+  (2, 9, 'Termite Removal', 'Floor started squeaking a month ago and the wood around my house looks damaged. Need an expert!', 450, FALSE),
+  (3, 1, 'Kitchen Remodel', 'We just built our first house and we are looking to redo the kitchen. Looking for an experienced renovator.', NULL, FALSE),
+  (4, 6, 'Paint Job', '144sqft room to be painted. Paint supplied.', 125, FALSE),
+  (5, 15, 'Home Security System', 'All the bells and whistles: windows, doors, garage, outside and fridge.', 2000, FALSE),
+  (1, 5, 'Laminated Tile Job', 'Supplies Included. 500sqft of flooring to do.', 4000, TRUE),
+  (1, 2, 'Tree Pruning', 'Redwood tree in need of pruning, 60ft ', 650, TRUE),
+  (1, 5, 'Outlet Issues', 'Outlet is not powering.', NULL, TRUE),
+  (2, 4, 'Bathtub Clogged', 'Tub is stopped.', NULL, FALSE);
