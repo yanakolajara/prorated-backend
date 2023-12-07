@@ -30,11 +30,11 @@ VALUES
   ('Landscaping Design', 'Customized landscaping design and implementation', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
   ('Roof Repair', 'Professional roof repair and maintenance', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
   ('Plumbing Services', 'Comprehensive plumbing solutions for homes and businesses', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-   ('Painting Services', 'Interior and exterior painting services with a variety of color options', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Painting Services', 'Interior and exterior painting services with a variety of color options', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
   ('Flooring Installation', 'High-quality flooring installation for different types of flooring', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
   ('HVAC Maintenance', 'Regular maintenance and repair of heating, ventilation, and air conditioning systems', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
- ('Carpentry and Woodwork', 'Custom carpentry and woodwork for various projects', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-('Electrician', 'Skilled electricians for all your electrical needs', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg');
+  ('Carpentry and Woodwork', 'Custom carpentry and woodwork for various projects', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
+  ('Electrician', 'Skilled electricians for all your electrical needs', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg');
 
 
 INSERT INTO
@@ -54,12 +54,12 @@ VALUES
 INSERT INTO 
   project_listings (user_id, services_id, title, summary, budget, completed) 
   VALUES 
-  (1, 12, 'Window Replacement', 'Looking for someone to replace my broken living room window ASAP', NULL, FALSE),
-  (2, 9, 'Termite Removal', 'Floor started squeaking a month ago and the wood around my house looks damaged. Need an expert!', 450, FALSE),
+  (1, 1, 'Window Replacement', 'Looking for someone to replace my broken living room window ASAP', NULL, FALSE),
+  (2, 9, 'House Rewiring, Expert Needed', 'I need my whole house rewired.', 1450, FALSE),
   (3, 1, 'Kitchen Remodel', 'We just built our first house and we are looking to redo the kitchen. Looking for an experienced renovator.', NULL, FALSE),
-  (4, 6, 'Paint Job', '144sqft room to be painted. Paint supplied.', 125, FALSE),
-  (5, 15, 'Home Security System', 'All the bells and whistles: windows, doors, garage, outside and fridge.', 2000, FALSE),
-  (1, 5, 'Laminated Tile Job', 'Supplies Included. 500sqft of flooring to do.', 4000, TRUE),
+  (4, 5, 'Paint Job', '144sqft room to be painted. Paint supplied.', 125, FALSE),
+  (5, 7, 'Radiator Down', 'Heat is on but no HEAT! Need Done ASAP', NULL, FALSE),
+  (1, 6, 'Laminated Tile Job', 'Supplies Included. 500sqft of flooring to do.', 4000, TRUE),
   (1, 2, 'Tree Pruning', 'Redwood tree in need of pruning, 60ft ', 650, TRUE),
   (1, 5, 'Outlet Issues', 'Outlet is not powering.', NULL, TRUE),
   (2, 4, 'Bathtub Clogged', 'Tub is stopped.', NULL, FALSE);
