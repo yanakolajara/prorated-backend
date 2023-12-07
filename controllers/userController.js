@@ -2,16 +2,21 @@ const express = require("express");
 const router = express.Router();
 
 const listingsController = require("../controllers/projectListingsController");
+const reviewsController = require("./reviewsController");
 
 router.use("/:userId/listings", listingsController);
+router.use("/:usedId/reviews", reviewsController);
 
 const {
   getAllUsers,
   getUserById,
   addUser,
+  login,
   updateUser,
   deleteUser,
 } = require("../queries/users");
+
+const { getUserReviews } = require("../queries/review");
 
 const { checkUsername, validateURL } = require("../validations/checkUsers");
 
@@ -30,11 +35,18 @@ router.get("/:id", async (req, res) => {
   const id = req.params.id;
 
   const user = await getUserById(id);
+  const reviews = await getUserReviews(id);
 
-  if (user.length === 0) {
+  if (!user) {
     res.status(404).json({ error: "not found" });
   } else {
-    res.json(user[0]);
+    // res.json(user[0]);
+    res.status(200).json({
+      data: {
+        user,
+        reviews,
+      },
+    });
   }
 });
 
@@ -42,6 +54,16 @@ router.post("/", checkUsername, validateURL, async (req, res) => {
   const newUser = await addUser(req.body);
   console.log(newUser);
   res.json(newUser);
+});
+
+router.post("/login", async (req, res) => {
+  try {
+    const foundUser = await login(req.body);
+
+    res.json(foundUser);
+  } catch (error) {
+    res.status(500).json({ message: e.message, error: e.error });
+  }
 });
 
 router.delete("/:id", async (req, res) => {
