@@ -36,15 +36,15 @@ VALUES
 INSERT INTO 
   services(name, description, custom, image)
 VALUES
-  ('Home Renovation', 'Complete renovation services for residential properties', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Landscaping Design', 'Customized landscaping design and implementation', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Roof Repair', 'Professional roof repair and maintenance', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Plumbing Services', 'Comprehensive plumbing solutions for homes and businesses', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-   ('Painting Services', 'Interior and exterior painting services with a variety of color options', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('Flooring Installation', 'High-quality flooring installation for different types of flooring', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-  ('HVAC Maintenance', 'Regular maintenance and repair of heating, ventilation, and air conditioning systems', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
- ('Carpentry and Woodwork', 'Custom carpentry and woodwork for various projects', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg'),
-('Electrician', 'Skilled electricians for all your electrical needs', FALSE , 'https://cdn1.vectorstock.com/i/1000x1000/32/95/isometric-construction-vertical-composition-vector-18283295.jpg');
+  ('Home Renovation', 'Complete renovation services for residential properties', FALSE , 'https://media.istockphoto.com/id/1145284794/photo/modern-home-kitchen-and-dinning-room.jpg?s=612x612&w=0&k=20&c=wnJMSdcBJ3EKHTzzpH20q2FZ4-o3EFW3gx6WYe5vnYc='),
+  ('Landscaping Design', 'Customized landscaping design and implementation', FALSE , 'https://i.pinimg.com/564x/3d/ff/a2/3dffa254dcba0b7c540ecc4d80152435.jpg'),
+  ('Roof Repair', 'Professional roof repair and maintenance', FALSE , 'https://i.pinimg.com/564x/f9/ac/ca/f9accafcf3fb6e77630a2edead689031.jpg'),
+  ('Plumbing Services', 'Comprehensive plumbing solutions for homes and businesses', FALSE , 'https://i.pinimg.com/564x/b4/bb/68/b4bb683fcef239d8507b01351bda8d96.jpg'),
+   ('Painting Services', 'Interior and exterior painting services with a variety of color options', FALSE , 'https://i.pinimg.com/564x/62/11/81/6211813e8878be3c7da57077d6457f6e.jpg'),
+  ('Flooring Installation', 'High-quality flooring installation for different types of flooring', FALSE , 'https://i.pinimg.com/564x/bd/26/f2/bd26f26dc09bc9d7073c1546b06aa6f6.jpg'),
+  ('HVAC Maintenance', 'Regular maintenance and repair of heating, ventilation, and air conditioning systems', FALSE , 'https://i.pinimg.com/564x/32/6c/4e/326c4e5dd91534b69f048c13eaca6511.jpg'),
+ ('Carpentry and Woodwork', 'Custom carpentry and woodwork for various projects', FALSE , 'https://i.pinimg.com/564x/05/33/14/0533142f308c02a04baa5c0385aadf98.jpg'),
+('Electrician', 'Skilled electricians for all your electrical needs', FALSE , 'https://i.pinimg.com/564x/70/d2/a5/70d2a5bfb09edcb66b7507e1a3e199ec.jpg');
 
 
 INSERT INTO
@@ -69,5 +69,9 @@ VALUES
   (9, 8);
   
 
-INSERT INTO reviews(contractor_id, user_id, review, rating)
-VALUES (1, 1, 'great service', 5), (1, 2, 'ok service', 3), (2, 3, 'i could do better', 1);
+INSERT INTO reviews(contractor_id, user_id, name, review, rating)
+VALUES
+  (1, 1, 'john_doe', 'great service', 5),
+  (1, 2, 'jane_smith', 'ok service', 3),
+  (2, 3, 'bob_jones', 'i could do better', 1);
+
