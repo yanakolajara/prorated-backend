@@ -50,16 +50,6 @@ CREATE TABLE contractors_services (
     ON DELETE CASCADE
 );
 
--- CREATE TABLE project_listings (
---     id SERIAL PRIMARY KEY,
---     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
---     services_id INTEGER REFERENCES services(id) ON DELETE CASCADE,
---     title TEXT NOT NULL,
---     summary TEXT NOT NULL,
---     budget INT
--- );
-
-
 CREATE TABLE reviews (
     id BIGSERIAL NOT NULL PRIMARY KEY,
     contractor_id INTEGER NOT NULL REFERENCES contractors(id),
@@ -68,4 +58,14 @@ CREATE TABLE reviews (
     review TEXT NOT NULL,
     rating INT NOT NULL CHECK(rating >=1 and rating <= 5),
     date timestamp NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE project_listings (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+    services_id INTEGER REFERENCES services(id) ON DELETE CASCADE,
+    title TEXT NOT NULL,
+    summary TEXT NOT NULL,
+    budget INT,
+    completed boolean DEFAULT FALSE
 );

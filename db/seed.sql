@@ -47,6 +47,7 @@ VALUES
 ('Electrician', 'Skilled electricians for all your electrical needs', FALSE , 'https://i.pinimg.com/564x/70/d2/a5/70d2a5bfb09edcb66b7507e1a3e199ec.jpg');
 
 
+
 INSERT INTO
   contractors_services (contractor_id, service_id)
 VALUES
@@ -68,10 +69,27 @@ VALUES
   
   (9, 8);
   
-
 INSERT INTO reviews(contractor_id, user_id, name, review, rating)
 VALUES
+ 
   (1, 1, 'john_doe', 'great service', 5),
+ 
   (1, 2, 'jane_smith', 'ok service', 3),
+ 
   (2, 3, 'bob_jones', 'i could do better', 1);
+
+
+
+INSERT INTO 
+  project_listings (user_id, services_id, title, summary, budget, completed) 
+  VALUES 
+  (1, 1, 'Window Replacement', 'Looking for someone to replace my broken living room window ASAP', NULL, FALSE),
+  (2, 9, 'House Rewiring, Expert Needed', 'I need my whole house rewired.', 1450, FALSE),
+  (3, 1, 'Kitchen Remodel', 'We just built our first house and we are looking to redo the kitchen. Looking for an experienced renovator.', NULL, FALSE),
+  (4, 5, 'Paint Job', '144sqft room to be painted. Paint supplied.', 125, FALSE),
+  (5, 7, 'Radiator Down', 'Heat is on but no HEAT! Need Done ASAP', NULL, FALSE),
+  (1, 6, 'Laminated Tile Job', 'Supplies Included. 500sqft of flooring to do.', 4000, TRUE),
+  (1, 2, 'Tree Pruning', 'Redwood tree in need of pruning, 60ft ', 650, TRUE),
+  (1, 5, 'Outlet Issues', 'Outlet is not powering.', NULL, TRUE),
+  (2, 4, 'Bathtub Clogged', 'Tub is stopped.', NULL, FALSE);
 
