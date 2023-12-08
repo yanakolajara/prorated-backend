@@ -53,6 +53,7 @@ CREATE TABLE contractors_services (
 CREATE TABLE reviews (
     id BIGSERIAL NOT NULL PRIMARY KEY,
     contractor_id INTEGER NOT NULL REFERENCES contractors(id),
+    name VARCHAR,
     user_id INTEGER NOT NULL REFERENCES users(id),
     review TEXT NOT NULL,
     rating INT NOT NULL CHECK(rating >=1 and rating <= 5),
