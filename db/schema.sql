@@ -4,12 +4,12 @@ CREATE DATABASE prorated_dev;
 
 \c prorated_dev;
 
-DROP TABLE IF EXISTS project_listings;
-DROP TABLE IF EXISTS contractors_services;
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS contractors;
-DROP TABLE IF EXISTS services;
-DROP TABLE IF EXISTS reviews;
+DROP TABLE IF EXISTS contractors CASCADE;
+DROP TABLE IF EXISTS services CASCADE;
+DROP TABLE IF EXISTS contractors_services;
+DROP TABLE IF EXISTS reviews CASCADE;
+DROP TABLE IF EXISTS project_listings;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -19,16 +19,19 @@ CREATE TABLE users (
   first_name VARCHAR(255),
   last_name VARCHAR(255),
   phone_number VARCHAR(15),
-  profile_picture VARCHAR(255),
+  profile_picture VARCHAR,
   location VARCHAR(100)
 );
 
 CREATE TABLE contractors (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
-    description TEXT NOT NULL,
-    ratings INT,
-    reviews INT,
+    name VARCHAR(255),
+    description TEXT,
+    jobtitle VARCHAR(100),
+    location VARCHAR(100),
+    experience INTEGER,
+    contact VARCHAR(255),
+    phone_number VARCHAR(15),
     logo TEXT
 );
 
@@ -67,5 +70,3 @@ CREATE TABLE project_listings (
     budget INT,
     completed boolean DEFAULT FALSE
 );
-
-
