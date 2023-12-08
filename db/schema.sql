@@ -4,11 +4,12 @@ CREATE DATABASE prorated_dev;
 
 \c prorated_dev;
 
-DROP TABLE IF EXISTS project_listings;
 DROP TABLE IF EXISTS contractors_services;
+DROP TABLE IF EXISTS project_listings;
+DROP TABLE IF EXISTS reviews CASCADE;
+DROP TABLE IF EXISTS contractors CASCADE;
+DROP TABLE IF EXISTS services CASCADE;
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS contractors;
-DROP TABLE IF EXISTS services;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -18,17 +19,19 @@ CREATE TABLE users (
   first_name VARCHAR(255),
   last_name VARCHAR(255),
   phone_number VARCHAR(15),
-  profile_picture VARCHAR(255),
+  profile_picture VARCHAR,
   location VARCHAR(100)
 );
 
 CREATE TABLE contractors (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
-    description TEXT NOT NULL,
-    ratings INT,
-    reviews INT,
-    logo TEXT
+    name VARCHAR(255),
+    description TEXT,
+    jobtitle VARCHAR(100),
+    location VARCHAR(100),
+    experience INTEGER,
+    contact VARCHAR(255),
+    phone_number VARCHAR(15)
 );
 
 CREATE TABLE services (
@@ -47,6 +50,15 @@ CREATE TABLE contractors_services (
     ON DELETE CASCADE
 );
 
+CREATE TABLE reviews (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    contractor_id INTEGER NOT NULL REFERENCES contractors(id),
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    review TEXT NOT NULL,
+    rating INT NOT NULL CHECK(rating >=1 and rating <= 5),
+    date timestamp NOT NULL DEFAULT NOW()
+);
+
 CREATE TABLE project_listings (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
@@ -55,4 +67,4 @@ CREATE TABLE project_listings (
     summary TEXT NOT NULL,
     budget INT,
     completed boolean DEFAULT FALSE
-)
+);
