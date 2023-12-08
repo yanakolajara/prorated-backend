@@ -9,6 +9,7 @@ DROP TABLE IF EXISTS contractors_services;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS contractors;
 DROP TABLE IF EXISTS services;
+DROP TABLE IF EXISTS reviews;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -47,6 +48,16 @@ CREATE TABLE contractors_services (
     ON DELETE CASCADE
 );
 
+CREATE TABLE reviews (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    contractor_id INTEGER NOT NULL REFERENCES contractors(id),
+    name VARCHAR,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    review TEXT NOT NULL,
+    rating INT NOT NULL CHECK(rating >=1 and rating <= 5),
+    date timestamp NOT NULL DEFAULT NOW()
+);
+
 CREATE TABLE project_listings (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
@@ -55,4 +66,6 @@ CREATE TABLE project_listings (
     summary TEXT NOT NULL,
     budget INT,
     completed boolean DEFAULT FALSE
-)
+);
+
+
