@@ -112,13 +112,13 @@ VALUES
   (7, 'https://concetticontracting.com/wp-content/uploads/2014/09/tile-flooring-300x296.jpg'),
   (7, 'https://dynamicprotectivecoat.com/wp-content/uploads/2022/10/Flooring-Contractor-in-Maryland-Heights-MO-1-300x200.jpg'),
   (7, 'https://kelmwoodflooring.com/images/floor_refinishing_2_375x250-OptimizedSmushed.jpg'),
-  (8, 'https://i.imgur.com/nems9gb.jpg')
-  (8, 'https://i.imgur.com/i4n6kzE.jpg')
-  (8, 'https://i.imgur.com/NrLJmsR.jpg')
-  (8, 'https://i.imgur.com/nRed4Y6.jpg')
-  (8, 'https://i.imgur.com/AZbWoN0.jpg')
-  (9, 'https://i.imgur.com/EI64frq.jpg');
-  (9, 'https://i.imgur.com/Ksz3tqm.jpg');
-  (9, 'https://i.imgur.com/ICYuBoz.jpg');
-  (9, 'https://i.imgur.com/V0PYbdt.jpg');
+  (8, 'https://i.imgur.com/nems9gb.jpg'),
+  (8, 'https://i.imgur.com/i4n6kzE.jpg'),
+  (8, 'https://i.imgur.com/NrLJmsR.jpg'),
+  (8, 'https://i.imgur.com/nRed4Y6.jpg'),
+  (8, 'https://i.imgur.com/AZbWoN0.jpg'),
+  (9, 'https://i.imgur.com/EI64frq.jpg'),
+  (9, 'https://i.imgur.com/Ksz3tqm.jpg'),
+  (9, 'https://i.imgur.com/ICYuBoz.jpg'),
+  (9, 'https://i.imgur.com/V0PYbdt.jpg'),
   (9, 'https://i.imgur.com/vgkW8v2.jpg');
