@@ -21,6 +21,30 @@ const getAllListingsByUser = async (userId) => {
   }
 };
 
+const getAllActiveListingsFromUser = async (userId) => {
+  try {
+    const allActiveListingsFromUser = await db.any(
+      `SELECT * FROM project_listings WHERE user_id = $1 AND completed = FALSE`,
+      userId
+    );
+    return allActiveListingsFromUser;
+  } catch (e) {
+    return e;
+  }
+};
+
+const getAllCompletedListingsFromUser = async (userId) => {
+  try {
+    const allCompletedListingsFromUser = await db.any(
+      `SELECT * FROM project_listings WHERE user_id = $1 AND completed = TRUE`,
+      userId
+    );
+    return allCompletedListingsFromUser;
+  } catch (e) {
+    return e;
+  }
+};
+
 const getListingById = async (id) => {
   try {
     const project = await db.any(
@@ -76,4 +100,6 @@ module.exports = {
   deleteListingById,
   updateListingById,
   getAllListingsByUser,
+  getAllActiveListingsFromUser,
+  getAllCompletedListingsFromUser,
 };

@@ -4,12 +4,13 @@ CREATE DATABASE prorated_dev;
 
 \c prorated_dev;
 
-DROP TABLE IF EXISTS contractors_services;
-DROP TABLE IF EXISTS project_listings;
-DROP TABLE IF EXISTS reviews CASCADE;
+DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS contractors CASCADE;
 DROP TABLE IF EXISTS services CASCADE;
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS contractors_services;
+DROP TABLE IF EXISTS reviews CASCADE;
+DROP TABLE IF EXISTS project_listings;
+DROP TABLE IF EXISTS images;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -19,7 +20,7 @@ CREATE TABLE users (
   first_name VARCHAR(255),
   last_name VARCHAR(255),
   phone_number VARCHAR(15),
-  profile_picture VARCHAR(255),
+  profile_picture VARCHAR,
   location VARCHAR(100)
 );
 
@@ -31,7 +32,8 @@ CREATE TABLE contractors (
     location VARCHAR(100),
     experience INTEGER,
     contact VARCHAR(255),
-    phone_number VARCHAR(15)
+    phone_number VARCHAR(15),
+    logo TEXT
 );
 
 CREATE TABLE services (
@@ -50,28 +52,28 @@ CREATE TABLE contractors_services (
     ON DELETE CASCADE
 );
 
--- CREATE TABLE project_listings (
---     id SERIAL PRIMARY KEY,
---     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
---     services_id INTEGER REFERENCES services(id) ON DELETE CASCADE,
---     title TEXT NOT NULL,
---     summary TEXT NOT NULL,
---     budget INT
--- );
-
-
 CREATE TABLE reviews (
     id BIGSERIAL NOT NULL PRIMARY KEY,
     contractor_id INTEGER NOT NULL REFERENCES contractors(id),
-    name VARCHAR(50) NOT NULL,
+    name VARCHAR,
+    user_id INTEGER NOT NULL REFERENCES users(id),
     review TEXT NOT NULL,
     rating INT NOT NULL CHECK(rating >=1 and rating <= 5),
     date timestamp NOT NULL DEFAULT NOW()
 );
 
-
 CREATE TABLE images (
   id SERIAL PRIMARY KEY,
   contractor_id INTEGER REFERENCES contractors(id) ON DELETE CASCADE,
   image_url TEXT
+);
+
+CREATE TABLE project_listings (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+    services_id INTEGER REFERENCES services(id) ON DELETE CASCADE,
+    title TEXT NOT NULL,
+    summary TEXT NOT NULL,
+    budget INT,
+    completed boolean DEFAULT FALSE
 );

@@ -14,7 +14,11 @@ const getAllUsers = async () => {
 // read a single user.
 const getUserById = async (id) => {
   try {
-    const user = await db.any(`SELECT * FROM users WHERE id = $1`, id);
+    // const user = await db.any(`SELECT * FROM users WHERE id = $1`, id);
+    const user = await db.oneOrNone(
+      "select * from users left join (select user_id, COUNT(*) from reviews group by user_id) reviews on users.id = reviews.user_id where id = $1",
+      [id]
+    );
 
     return user;
   } catch (error) {
@@ -26,7 +30,7 @@ const getUserById = async (id) => {
 const addUser = async (data) => {
   try {
     const newUser = await db.one(
-      "INSERT INTO users (username, password, email, first_name, last_name, phone_number, profile_picture,size , location) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *",
+      "INSERT INTO users (username, password, email, first_name, last_name, phone_number, profile_picture, location) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *",
       [
         data.username,
         data.password,
@@ -41,6 +45,27 @@ const addUser = async (data) => {
     return newUser;
   } catch (error) {
     return error;
+  }
+};
+//login a user
+const login = async (data) => {
+  try {
+    const { email } = data;
+
+    const foundUser = await db.any(
+      "SELECT * FROM users WHERE email = $1",
+      email
+    );
+    if (foundUser.length === 0) {
+      throw {
+        message: "error",
+        error: "User does not exist, please try again or sign up",
+      };
+    } else {
+      return foundUser[0];
+    }
+  } catch (e) {
+    return e;
   }
 };
 // update a single user.
@@ -85,6 +110,7 @@ module.exports = {
   getAllUsers,
   getUserById,
   addUser,
+  login,
   updateUser,
   deleteUser,
 };

@@ -75,9 +75,13 @@ contractor.get("/service/:id", async (req, res) => {
   }
 });
 
-contractor.post("/:id/addReview", async (req, res) => {
+contractor.post("/:id/user/:userId/addReview", async (req, res) => {
   try {
-    const newReview = await addContractorReview(req.params.id, req.body);
+    const newReview = await addContractorReview(
+      req.params.id,
+      req.params.userId,
+      req.body
+    );
 
     console.log(newReview);
     res.json(newReview);
