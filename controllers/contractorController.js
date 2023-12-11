@@ -7,6 +7,7 @@ const {
   getContractorByID,
   getContractorsByServiceId,
   getContractorRatingsData,
+  getImages,
 } = require("../queries/contractor");
 
 const {

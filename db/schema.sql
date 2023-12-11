@@ -10,6 +10,7 @@ DROP TABLE IF EXISTS services CASCADE;
 DROP TABLE IF EXISTS contractors_services;
 DROP TABLE IF EXISTS reviews CASCADE;
 DROP TABLE IF EXISTS project_listings;
+DROP TABLE IF EXISTS images;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -59,6 +60,12 @@ CREATE TABLE reviews (
     review TEXT NOT NULL,
     rating INT NOT NULL CHECK(rating >=1 and rating <= 5),
     date timestamp NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE images (
+  id SERIAL PRIMARY KEY,
+  contractor_id INTEGER REFERENCES contractors(id) ON DELETE CASCADE,
+  image_url TEXT
 );
 
 CREATE TABLE project_listings (
