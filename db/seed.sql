@@ -30,7 +30,7 @@ VALUES
   ('CoolBreeze HVAC', 'Keeping your home comfortable with top-notch HVAC maintenance', 'HVAC Technician', 'City UVW', 4.7, 'coolbreeze@example.com', '666-777-8888', 'https://i.imgur.com/W3LnoNR.png'
   ),
   
-  ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 'Carpentry Expert', 'City JKL', 4.8, 'mastercrafter@example.com', '444-555-6666', 'https://i.imgur.com/O48kP3E.png'
+  ('MasterCrafter Carpentry', 'Masterful carpentry and woodwork for unique and custom projects', 'Carpentry Expert', 'City JKL', 4.8, 'mastercrafter@example.com', '444-555-6666', 'https://i.imgur.com/Ga6f5wl.png?1'
   );
 
 INSERT INTO 
