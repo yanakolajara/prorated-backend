@@ -16,7 +16,12 @@ const getUserById = async (id) => {
   try {
     // const user = await db.any(`SELECT * FROM users WHERE id = $1`, id);
     const user = await db.oneOrNone(
-      "select * from users left join (select user_id, COUNT(*) from reviews group by user_id) reviews on users.id = reviews.user_id where id = $1",
+      `select *
+      from users
+      left join
+      (select user_id, COUNT(*) from reviews group by user_id) reviews on users.id = reviews.user_id
+      left join (select user_id, COUNT(*) AS listings_count from project_listings group by user_id) project_listings on users.id = project_listings.user_id
+      where id = $1`,
       [id]
     );
 
