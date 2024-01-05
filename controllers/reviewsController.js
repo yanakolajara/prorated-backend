@@ -6,10 +6,10 @@ const {
   addContractorReview,
 } = require("../queries/review");
 
-router.get("/", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const id = req.params.id;
-    const reviews = await getContractorReviews(req.params.contractorId);
+    const reviews = await getContractorReviews(id);
 
     res.json(reviews);
   } catch (error) {
