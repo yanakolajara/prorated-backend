@@ -76,7 +76,7 @@ VALUES
  
   (1, 2, 'jane_smith', 'ok service', 3),
  
-  (2, 3, 'bob_jones', 'i could do better', 1);
+  (2, 3, 'bob_robinson', 'i could do better', 1);
 
 INSERT INTO images (contractor_id, image_url)
 VALUES
