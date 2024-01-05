@@ -17,6 +17,7 @@ const {
 } = require("../queries/users");
 
 const { getUserReviews } = require("../queries/review");
+const { getAllListingsByUser } = require("../queries/projectListings");
 
 const { checkUsername, validateURL } = require("../validations/checkUsers");
 
@@ -36,6 +37,7 @@ router.get("/:id", async (req, res) => {
 
   const user = await getUserById(id);
   const reviews = await getUserReviews(id);
+  const listings = await getAllListingsByUser(id);
 
   if (!user) {
     res.status(404).json({ error: "not found" });
@@ -45,6 +47,7 @@ router.get("/:id", async (req, res) => {
       data: {
         user,
         reviews,
+        listings,
       },
     });
   }
