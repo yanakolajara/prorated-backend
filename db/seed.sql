@@ -87,7 +87,7 @@ VALUES
  
   (1, 2, 'jane_smith', 'For the Price and time it took to complete my request, the results were okay. Not bad at all but not amazing.', 3),
  
-  (2, 3, 'bob_robinson', 'This contractor was an absolute mess. The work was so bad that I could do better', 1);
+  (2, 3, 'bob_robinson', 'This contractor was an absolute mess. The work was so bad that I could do better', 1),
 
   (2, 1, 'Jayden_Perez', 'I recently hired Greenscape Landscaping for a landscaping project, and I am extremely satisfied with the results. The attention to detail, creativity, and dedication to customer satisfaction were impressive. Greenscape Landscaping transformed my outdoor space into a beautiful and functional area. I highly recommend their services.', 5),
 
