@@ -61,6 +61,10 @@ INSERT INTO
   contractors_services (contractor_id, service_id)
 VALUES
   (1, 1),
+  (3, 1),
+  (4, 1),
+  (6, 1),
+  (8, 1),
   (1, 3),
   (2, 2),
   (10, 2),
