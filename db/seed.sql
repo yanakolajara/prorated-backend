@@ -80,11 +80,11 @@ VALUES
 INSERT INTO reviews(contractor_id, user_id, name, review, rating)
 VALUES
  
-  (1, 1, 'john_doe', 'great service', 5),
+  (1, 1, 'john_doe', 'Excellent service at a reasonable price.', 5),
  
-  (1, 2, 'jane_smith', 'ok service', 3),
+  (1, 2, 'jane_smith', 'For the Price and time it took to complete my request, the results were okay. Not bad at all but not amazing.', 3),
  
-  (2, 3, 'bob_robinson', 'i could do better', 1);
+  (2, 3, 'bob_robinson', 'This contractor was an absolute mess. The work was so bad that I could do better', 1);
 
 INSERT INTO images (contractor_id, image_url)
 VALUES
