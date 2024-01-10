@@ -13,25 +13,34 @@ INSERT INTO contractors (name, description, jobtitle, location, experience, cont
 VALUES
 ('Smith Construction', 'Transforming dreams into reality, Smith Construction excels in providing comprehensive residential and commercial construction services. With a commitment to quality craftsmanship, we bring innovation and precision to every project, ensuring satisfaction from foundation to finishing touches.', 'Construction Manager', 'Albany, NY', 4.8, 'smith@example.com', '987-654-3210', 'https://i.imgur.com/Pteh4jv.png' 
 ),
-   ('GreenScape Landscaping', 'Immerse yourself in the beauty of nature with GreenScape Landscaping. Our team specializes in creating sustainable and artistic landscaping solutions that harmonize with the environment. From vibrant gardens to tranquil outdoor spaces, we turn your landscape dreams into living, breathing works of art.', 'Landscaping Specialist', 'Utica, NY', 4.5, 'greenscape@example.com', '111-222-3333', 'https://i.imgur.com/O48kP3E.png'
+('GreenScape Landscaping', 'Immerse yourself in the beauty of nature with GreenScape Landscaping. Our team specializes in creating sustainable and artistic landscaping solutions that harmonize with the environment. From vibrant gardens to tranquil outdoor spaces, we turn your landscape dreams into living, breathing works of art.', 'Landscaping Specialist', 'Utica, NY', 4.5, 'greenscape@example.com', '111-222-3333', 'https://i.imgur.com/O48kP3E.png'
 ),
-  ('Swift Roofing Experts', 'Elevate your property with Swift Roofing Experts, where reliability meets excellence. Our roofing services are swift, efficient, and detail-oriented, ensuring your roof stands the test of time. Trust us to safeguard your home with top-notch craftsmanship and unparalleled expertise.', 'Roofing Expert', 'Long Island City, NY', 4.9, 'swiftroofing@example.com', '555-666-7777', 'https://i.imgur.com/i800wRz.png'
- ),
-  ('PlumbMasters', 'PlumbMasters is your trusted partner for all things plumbing. From minor repairs to complex installations, our master plumbers bring unparalleled expertise and precision to every job. Expect seamless solutions and unmatched customer service for a stress-free plumbing experience.', 'Master Plumber', 'Rochester, NY', 4.7, 'plumbmasters@example.com', '999-888-7777', 'https://i.imgur.com/6T5TyXz.png'
-   ),
-  ('PowerSpark Electricians', 'Empower your space with PowerSpark Electricians. Our team delivers robust solutions for all your electrical needs, combining cutting-edge technology with seasoned expertise. From intricate wiring to energy-efficient installations, we spark innovation in every corner.', 'Electrical Specialist', 'Yonkers, NY', 4.7, 'powerspark@example.com', '333-444-5555', 'https://i.imgur.com/LKDY6qY.png'
-   ),
-  ('ColorSplash Painters', 'ColorSplash Painters brings life and personality to your surroundings. Our professional painters are artists with a brush, transforming spaces with a vibrant palette. Experience a splash of creativity and meticulous craftsmanship that turns your vision into a masterpiece.', 'Professional Painter', 'Saratoga Springs, NY', 4.9, 'colorsplash@example.com', '777-888-9999', 'https://i.imgur.com/J4XaYF8.png'
-  ),
-  
-  ('FloorCrafters', 'Step into luxury with FloorCrafters, where every step is a work of art. We specialize in crafting beautiful and durable floors that elevate your space. With precision and expertise, we bring flooring dreams to life, creating a foundation for lasting beauty and comfort.', 'Flooring Specialist', 'Syracuse, NY', 4.8, 'floorcrafters@example.com', '222-333-4444', 'https://i.imgur.com/eatKemZ.png'
-  ),
-  
-  ('CoolBreeze HVAC', 'CoolBreeze HVAC is your key to year-round comfort. Our top-notch HVAC technicians are dedicated to keeping your home cool in summer and warm in winter. Experience unmatched maintenance and service that ensures your indoor climate is always just right.', 'HVAC Technician', 'Plattsburgh, NY', 4.7, 'coolbreeze@example.com', '666-777-8888', 'https://i.imgur.com/W3LnoNR.png'
-  ),
-  
-  ('MasterCrafter Carpentry', 'MasterCrafter Carpentry is where imagination meets craftsmanship. Our experts specialize in masterful carpentry and woodwork, creating unique and custom projects that reflect your style. From intricate details to sturdy structures, we bring your visions to life with unparalleled skill.', 'Carpentry Expert', 'Troy, Ny', 4.8, 'mastercrafter@example.com', '444-555-6666', 'https://i.imgur.com/Ga6f5wl.png?1'
-  );
+('Swift Roofing Experts', 'Elevate your property with Swift Roofing Experts, where reliability meets excellence. Our roofing services are swift, efficient, and detail-oriented, ensuring your roof stands the test of time. Trust us to safeguard your home with top-notch craftsmanship and unparalleled expertise.', 'Roofing Expert', 'Long Island City, NY', 4.9, 'swiftroofing@example.com', '555-666-7777', 'https://i.imgur.com/i800wRz.png'
+),
+('PlumbMasters', 'PlumbMasters is your trusted partner for all things plumbing. From minor repairs to complex installations, our master plumbers bring unparalleled expertise and precision to every job. Expect seamless solutions and unmatched customer service for a stress-free plumbing experience.', 'Master Plumber', 'Rochester, NY', 4.7, 'plumbmasters@example.com', '999-888-7777', 'https://i.imgur.com/6T5TyXz.png'
+),
+('PowerSpark Electricians', 'Empower your space with PowerSpark Electricians. Our team delivers robust solutions for all your electrical needs, combining cutting-edge technology with seasoned expertise. From intricate wiring to energy-efficient installations, we spark innovation in every corner.', 'Electrical Specialist', 'Yonkers, NY', 4.7, 'powerspark@example.com', '333-444-5555', 'https://i.imgur.com/LKDY6qY.png'
+),
+('ColorSplash Painters', 'ColorSplash Painters brings life and personality to your surroundings. Our professional painters are artists with a brush, transforming spaces with a vibrant palette. Experience a splash of creativity and meticulous craftsmanship that turns your vision into a masterpiece.', 'Professional Painter', 'Saratoga Springs, NY', 4.9, 'colorsplash@example.com', '777-888-9999', 'https://i.imgur.com/J4XaYF8.png'
+),  
+('FloorCrafters', 'Step into luxury with FloorCrafters, where every step is a work of art. We specialize in crafting beautiful and durable floors that elevate your space. With precision and expertise, we bring flooring dreams to life, creating a foundation for lasting beauty and comfort.', 'Flooring Specialist', 'Syracuse, NY', 4.8, 'floorcrafters@example.com', '222-333-4444', 'https://i.imgur.com/eatKemZ.png'
+),  
+('CoolBreeze HVAC', 'CoolBreeze HVAC is your key to year-round comfort. Our top-notch HVAC technicians are dedicated to keeping your home cool in summer and warm in winter. Experience unmatched maintenance and service that ensures your indoor climate is always just right.', 'HVAC Technician', 'Plattsburgh, NY', 4.7, 'coolbreeze@example.com', '666-777-8888', 'https://i.imgur.com/W3LnoNR.png'
+),
+('MasterCrafter Carpentry', 'MasterCrafter Carpentry is where imagination meets craftsmanship. Our experts specialize in masterful carpentry and woodwork, creating unique and custom projects that reflect your style. From intricate details to sturdy structures, we bring your visions to life with unparalleled skill.', 'Carpentry Expert', 'Troy, Ny', 4.8, 'mastercrafter@example.com', '444-555-6666', 'https://i.imgur.com/Ga6f5wl.png?1'
+), 
+('The Ground Guys', 'The Ground Guys specializes in creating sustainable landscapes that thrive year-round. Our expert team designs and maintains lush greenery for residential and commercial spaces.', 'Landscape Designer', 'Seattle, WA', 4.6, 'evergreen@example.com', '777-888-9999', 'https://cdn.logojoy.com/wp-content/uploads/20200605154938/the-ground-guys-landscaping-logo.png'
+), 
+('Parklane Landscapes', 'Parklane Landscapes transforms outdoor spaces into vibrant and inviting areas. Our team specializes in creating colorful gardens and sustainable landscapes.', 'Landscape Artist', 'Los Angeles, CA', 4.7, 'blossombloom@example.com', '111-222-3334', 'https://cdn.logojoy.com/wp-content/uploads/20200605155119/parklane-landscape-logo-.png'
+),
+('Creative Edge', 'Creative Edge Landscaping designs serene outdoor environments that promote relaxation and tranquility. We specialize in creating Zen-inspired landscapes for residential and commercial clients.', 'Zen Garden Specialist', 'San Francisco, CA', 4.9, 'serenescapes@example.com', '222-333-4444', 'https://bcassetcdn.com/public/blog/wp-content/uploads/2021/10/19204719/creative-edge-lawn-and-landscape-by-designertech-designcrowd.png'
+),
+('Willow Tree', 'Willow Tree Landscaping brings nature to urban spaces, creating green havens in city environments. Our expertise lies in designing and maintaining vibrant city gardens.', 'Cityscape Designer', 'New York City, NY', 4.6, 'urbanoasis@example.com', '333-444-5555', 'https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/1631/posts/32478/item-list-card/ModernLogos11_copy.jpg'
+),
+('Adones Landscapes', 'Adones Landscapes specializes in creating landscapes that evoke a sense of tranquility and harmony with nature. We focus on sustainable design and personalized garden spaces.', 'Sustainable Landscaper', 'Austin, TX', 4.8, 'tranquilterra@example.com', '444-555-6666', 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/landscaping-logo-shield-design-template-6fb486224e6478e25dc51fafdb5a003c_screen.jpg?ts=1696316668'
+),
+('Elite Tree Services', 'Elite Tree Services and Landscaping creates visually stunning landscapes that captivate the senses. Our team specializes in innovative and artistic designs for outdoor spaces.', 'Landscape Visionary', 'Miami, FL', 4.5, 'vividvistas@example.com', '555-666-7777', 'https://i.pinimg.com/originals/75/6d/e9/756de988d7b097af990da604a6ea947a.png'
+);
 
 INSERT INTO 
   services(name, description, custom, image)
@@ -52,33 +61,33 @@ INSERT INTO
   contractors_services (contractor_id, service_id)
 VALUES
   (1, 1),
+  (3, 1),
+  (4, 1),
+  (6, 1),
+  (8, 1),
   (1, 3),
   (2, 2),
- 
+  (10, 2),
+  (11, 2),
+  (12, 2),
+  (13 ,2),
+  (14, 2),
+  (15, 2),
   (3, 3),
- 
   (4, 4),
-
   (5, 9),
- 
   (6, 5),
-  
   (7, 6),
-  
   (8, 7),
-  
   (9, 8);
   
 INSERT INTO reviews(contractor_id, user_id, name, review, rating)
 VALUES
+  (1, 1, 'john_doe', 'Excellent service at a reasonable price.', 5),
  
-  (1, 1, 'john_doe', 'great service', 5),
+  (1, 2, 'jane_smith', 'For the Price and time it took to complete my request, the results were okay. Not bad at all but not amazing.', 3),
  
-  (1, 2, 'jane_smith', 'ok service', 3),
- 
-  (2, 3, 'bob_robinson', 'i could do better', 1),
-
-
+  (2, 3, 'bob_robinson', 'This contractor was an absolute mess. The work was so bad that I could do better', 1);
 
   (2, 1, 'Jayden_Perez', 'I recently hired Greenscape Landscaping for a landscaping project, and I am extremely satisfied with the results. The attention to detail, creativity, and dedication to customer satisfaction were impressive. Greenscape Landscaping transformed my outdoor space into a beautiful and functional area. I highly recommend their services.', 5),
 
@@ -179,8 +188,6 @@ VALUES
     (3, 1, 'Rayan_Mclean', 'I recently hired Smith Construction for a construction project, and the experience was excellent. The team exhibited professionalism and expertise throughout the process. Smith Construction exceeded my expectations, and I am thrilled with the results. I highly recommend their services.', 5),
     (3, 2, 'Elisabeth_Carpenter', 'Choosing Smith Construction for my construction project was a wise decision. The team demonstrated creativity, attention to detail, and a commitment to delivering high-quality work. Smith Construction transformed my space into a beautiful outcome. I am impressed with their work.', 5),
     (3, 3, 'Cael_Hampton', 'I recently worked with Smith Construction on a construction project, and the results were outstanding. The team demonstrated professionalism, clear communication, and a dedication to delivering quality work. Smith Construction has added significant value to my property. I highly recommend their services.', 4);
-
-
 
 INSERT INTO images (contractor_id, image_url)
 VALUES
