@@ -13,25 +13,34 @@ INSERT INTO contractors (name, description, jobtitle, location, experience, cont
 VALUES
 ('Smith Construction', 'Transforming dreams into reality, Smith Construction excels in providing comprehensive residential and commercial construction services. With a commitment to quality craftsmanship, we bring innovation and precision to every project, ensuring satisfaction from foundation to finishing touches.', 'Construction Manager', 'Albany, NY', 4.8, 'smith@example.com', '987-654-3210', 'https://i.imgur.com/Pteh4jv.png' 
 ),
-   ('GreenScape Landscaping', 'Immerse yourself in the beauty of nature with GreenScape Landscaping. Our team specializes in creating sustainable and artistic landscaping solutions that harmonize with the environment. From vibrant gardens to tranquil outdoor spaces, we turn your landscape dreams into living, breathing works of art.', 'Landscaping Specialist', 'Utica, NY', 4.5, 'greenscape@example.com', '111-222-3333', 'https://i.imgur.com/O48kP3E.png'
+('GreenScape Landscaping', 'Immerse yourself in the beauty of nature with GreenScape Landscaping. Our team specializes in creating sustainable and artistic landscaping solutions that harmonize with the environment. From vibrant gardens to tranquil outdoor spaces, we turn your landscape dreams into living, breathing works of art.', 'Landscaping Specialist', 'Utica, NY', 4.5, 'greenscape@example.com', '111-222-3333', 'https://i.imgur.com/O48kP3E.png'
 ),
-  ('Swift Roofing Experts', 'Elevate your property with Swift Roofing Experts, where reliability meets excellence. Our roofing services are swift, efficient, and detail-oriented, ensuring your roof stands the test of time. Trust us to safeguard your home with top-notch craftsmanship and unparalleled expertise.', 'Roofing Expert', 'Long Island City, NY', 4.9, 'swiftroofing@example.com', '555-666-7777', 'https://i.imgur.com/i800wRz.png'
- ),
-  ('PlumbMasters', 'PlumbMasters is your trusted partner for all things plumbing. From minor repairs to complex installations, our master plumbers bring unparalleled expertise and precision to every job. Expect seamless solutions and unmatched customer service for a stress-free plumbing experience.', 'Master Plumber', 'Rochester, NY', 4.7, 'plumbmasters@example.com', '999-888-7777', 'https://i.imgur.com/6T5TyXz.png'
-   ),
-  ('PowerSpark Electricians', 'Empower your space with PowerSpark Electricians. Our team delivers robust solutions for all your electrical needs, combining cutting-edge technology with seasoned expertise. From intricate wiring to energy-efficient installations, we spark innovation in every corner.', 'Electrical Specialist', 'Yonkers, NY', 4.7, 'powerspark@example.com', '333-444-5555', 'https://i.imgur.com/LKDY6qY.png'
-   ),
-  ('ColorSplash Painters', 'ColorSplash Painters brings life and personality to your surroundings. Our professional painters are artists with a brush, transforming spaces with a vibrant palette. Experience a splash of creativity and meticulous craftsmanship that turns your vision into a masterpiece.', 'Professional Painter', 'Saratoga Springs, NY', 4.9, 'colorsplash@example.com', '777-888-9999', 'https://i.imgur.com/J4XaYF8.png'
-  ),
-  
-  ('FloorCrafters', 'Step into luxury with FloorCrafters, where every step is a work of art. We specialize in crafting beautiful and durable floors that elevate your space. With precision and expertise, we bring flooring dreams to life, creating a foundation for lasting beauty and comfort.', 'Flooring Specialist', 'Syracuse, NY', 4.8, 'floorcrafters@example.com', '222-333-4444', 'https://i.imgur.com/eatKemZ.png'
-  ),
-  
-  ('CoolBreeze HVAC', 'CoolBreeze HVAC is your key to year-round comfort. Our top-notch HVAC technicians are dedicated to keeping your home cool in summer and warm in winter. Experience unmatched maintenance and service that ensures your indoor climate is always just right.', 'HVAC Technician', 'Plattsburgh, NY', 4.7, 'coolbreeze@example.com', '666-777-8888', 'https://i.imgur.com/W3LnoNR.png'
-  ),
-  
-  ('MasterCrafter Carpentry', 'MasterCrafter Carpentry is where imagination meets craftsmanship. Our experts specialize in masterful carpentry and woodwork, creating unique and custom projects that reflect your style. From intricate details to sturdy structures, we bring your visions to life with unparalleled skill.', 'Carpentry Expert', 'Troy, Ny', 4.8, 'mastercrafter@example.com', '444-555-6666', 'https://i.imgur.com/Ga6f5wl.png?1'
-  );
+('Swift Roofing Experts', 'Elevate your property with Swift Roofing Experts, where reliability meets excellence. Our roofing services are swift, efficient, and detail-oriented, ensuring your roof stands the test of time. Trust us to safeguard your home with top-notch craftsmanship and unparalleled expertise.', 'Roofing Expert', 'Long Island City, NY', 4.9, 'swiftroofing@example.com', '555-666-7777', 'https://i.imgur.com/i800wRz.png'
+),
+('PlumbMasters', 'PlumbMasters is your trusted partner for all things plumbing. From minor repairs to complex installations, our master plumbers bring unparalleled expertise and precision to every job. Expect seamless solutions and unmatched customer service for a stress-free plumbing experience.', 'Master Plumber', 'Rochester, NY', 4.7, 'plumbmasters@example.com', '999-888-7777', 'https://i.imgur.com/6T5TyXz.png'
+),
+('PowerSpark Electricians', 'Empower your space with PowerSpark Electricians. Our team delivers robust solutions for all your electrical needs, combining cutting-edge technology with seasoned expertise. From intricate wiring to energy-efficient installations, we spark innovation in every corner.', 'Electrical Specialist', 'Yonkers, NY', 4.7, 'powerspark@example.com', '333-444-5555', 'https://i.imgur.com/LKDY6qY.png'
+),
+('ColorSplash Painters', 'ColorSplash Painters brings life and personality to your surroundings. Our professional painters are artists with a brush, transforming spaces with a vibrant palette. Experience a splash of creativity and meticulous craftsmanship that turns your vision into a masterpiece.', 'Professional Painter', 'Saratoga Springs, NY', 4.9, 'colorsplash@example.com', '777-888-9999', 'https://i.imgur.com/J4XaYF8.png'
+),  
+('FloorCrafters', 'Step into luxury with FloorCrafters, where every step is a work of art. We specialize in crafting beautiful and durable floors that elevate your space. With precision and expertise, we bring flooring dreams to life, creating a foundation for lasting beauty and comfort.', 'Flooring Specialist', 'Syracuse, NY', 4.8, 'floorcrafters@example.com', '222-333-4444', 'https://i.imgur.com/eatKemZ.png'
+),  
+('CoolBreeze HVAC', 'CoolBreeze HVAC is your key to year-round comfort. Our top-notch HVAC technicians are dedicated to keeping your home cool in summer and warm in winter. Experience unmatched maintenance and service that ensures your indoor climate is always just right.', 'HVAC Technician', 'Plattsburgh, NY', 4.7, 'coolbreeze@example.com', '666-777-8888', 'https://i.imgur.com/W3LnoNR.png'
+),
+('MasterCrafter Carpentry', 'MasterCrafter Carpentry is where imagination meets craftsmanship. Our experts specialize in masterful carpentry and woodwork, creating unique and custom projects that reflect your style. From intricate details to sturdy structures, we bring your visions to life with unparalleled skill.', 'Carpentry Expert', 'Troy, Ny', 4.8, 'mastercrafter@example.com', '444-555-6666', 'https://i.imgur.com/Ga6f5wl.png?1'
+), 
+('Evergreen Gardens', 'Evergreen Gardens specializes in creating sustainable landscapes that thrive year-round. Our expert team designs and maintains lush greenery for residential and commercial spaces.', 'Landscape Designer', 'Seattle, WA', 4.6, 'evergreen@example.com', '777-888-9999', 'https://i.imgur.com/HIJKLMO.png'
+), 
+('Blossom & Bloom Landscapes', 'Blossom & Bloom Landscapes transforms outdoor spaces into vibrant and inviting areas. Our team specializes in creating colorful gardens and sustainable landscapes.', 'Landscape Artist', 'Los Angeles, CA', 4.7, 'blossombloom@example.com', '111-222-3334', 'https://i.imgur.com/1234567.png'
+),
+('SereneScapes', 'SereneScapes designs serene outdoor environments that promote relaxation and tranquility. We specialize in creating Zen-inspired landscapes for residential and commercial clients.', 'Zen Garden Specialist', 'San Francisco, CA', 4.9, 'serenescapes@example.com', '222-333-4444', 'https://i.imgur.com/2345678.png'
+),
+('Urban Oasis', 'Urban Oasis Landscaping brings nature to urban spaces, creating green havens in city environments. Our expertise lies in designing and maintaining vibrant city gardens.', 'Cityscape Designer', 'New York City, NY', 4.6, 'urbanoasis@example.com', '333-444-5555', 'https://i.imgur.com/3456789.png'
+),
+('Tranquil Terra Landscapes', 'Tranquil Terra Landscapes specializes in creating landscapes that evoke a sense of tranquility and harmony with nature. We focus on sustainable design and personalized garden spaces.', 'Sustainable Landscaper', 'Austin, TX', 4.8, 'tranquilterra@example.com', '444-555-6666', 'https://i.imgur.com/4567890.png'
+),
+('Vivid Vistas Landscaping', 'Vivid Vistas Landscaping creates visually stunning landscapes that captivate the senses. Our team specializes in innovative and artistic designs for outdoor spaces.', 'Landscape Visionary', 'Miami, FL', 4.5, 'vividvistas@example.com', '555-666-7777', 'https://i.imgur.com/5678901.png'
+);
 
 INSERT INTO 
   services(name, description, custom, image)
@@ -54,19 +63,18 @@ VALUES
   (1, 1),
   (1, 3),
   (2, 2),
- 
+  (10, 2),
+  (11, 2),
+  (12, 2),
+  (13 ,2),
+  (14, 2),
+  (15, 2),
   (3, 3),
- 
   (4, 4),
-
   (5, 9),
- 
   (6, 5),
-  
   (7, 6),
-  
   (8, 7),
-  
   (9, 8);
   
 INSERT INTO reviews(contractor_id, user_id, name, review, rating)
