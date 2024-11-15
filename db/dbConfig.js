@@ -1,5 +1,6 @@
-const pgp = require("pg-promise")();
-require("dotenv").config();
+const pgp = require('pg-promise')();
+
+require('dotenv').config();
 
 const cn = {
   host: process.env.PG_HOST,
@@ -8,16 +9,17 @@ const cn = {
   user: process.env.PG_USER,
   password: process.env.PG_PASSWORD,
 };
+console.log(cn);
 
 const db = pgp(cn);
 
 db.connect()
   .then((obj) => {
-    console.log("Postgres connection established");
+    console.log('Postgres connection established');
     obj.done();
   })
   .catch((e) => {
-    console.log("ERROR:", e.message || e);
+    console.log('Error:', e.message || e);
   });
 
 module.exports = db;
